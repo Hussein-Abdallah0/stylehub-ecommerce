@@ -48,7 +48,208 @@
       </div>
     </header>
 
-    <main class="cart-page"></main>
+    <main class="cart-page">
+      <div class="cart-header">
+        <div class="cart-title">
+          <h1>Shopping Cart</h1>
+          <p class="item-count">3 items</p>
+        </div>
+        <div class="cart-cta">
+          <a href="categories.html" class="btn-link">← Continue shopping</a>
+          <div class="security-badges" aria-hidden="true">
+            <span class="badge ssl" title="SSL secured">🔒 SSL</span>
+            <span class="badge checkout" title="Secure checkout">✅ Secure checkout</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li aria-current="page">Cart</li>
+        </ol>
+      </nav>
+
+      <div class="cart-container">
+        <!-- LEFT: Cart Items -->
+        <section class="cart-items" aria-labelledby="cart-heading">
+          <h2 id="cart-heading" class="sr-only">Cart items</h2>
+
+          <!-- Table header (desktop) -->
+          <div class="cart-table-header">
+            <div class="col item-col">Item</div>
+            <div class="col details-col">Details</div>
+            <div class="col price-col">Price</div>
+            <div class="col qty-col">Qty</div>
+            <div class="col subtotal-col">Subtotal</div>
+          </div>
+
+          <!-- Cart item 1 -->
+          <article class="cart-item">
+            <img
+              class="cart-item-image"
+              src="images/product/floral1.jpg"
+              alt="Floral Midi Dress"
+              width="150"
+              height="150"
+            />
+
+            <div class="cart-item-details">
+              <h3 class="product-name"><a href="product.html">Floral Midi Dress</a></h3>
+              <div class="product-brand">Brand: <a href="brand.html">Meadow</a></div>
+              <div class="product-sku">SKU: MD-1245</div>
+              <div class="product-opts">Size: M • Color: Multi</div>
+
+              <div class="item-actions">
+                <a href="#" class="action-link">Edit</a>
+                <a href="#" class="action-link">Save for later</a>
+                <a href="#" class="action-link">Move to wishlist</a>
+                <a href="#" class="action-link remove">Remove</a>
+              </div>
+            </div>
+
+            <div class="cart-item-price">
+              <div class="price-current">$99.00</div>
+              <div class="price-original"><del>$149.00</del></div>
+            </div>
+
+            <div class="cart-item-qty">
+              <div
+                class="quantity-selector"
+                role="group"
+                aria-label="Quantity selector for Floral Midi Dress"
+              >
+                <button class="quantity-btn" aria-label="Decrease quantity" disabled>−</button>
+                <input class="quantity-input" type="number" min="1" max="10" value="1" />
+                <button class="quantity-btn" aria-label="Increase quantity">＋</button>
+              </div>
+            </div>
+
+            <div class="cart-item-subtotal">
+              <div class="subtotal-amount">$99.00</div>
+            </div>
+          </article>
+
+          <!-- Cart item 2 -->
+          <article class="cart-item">
+            <img
+              class="cart-item-image"
+              src="images/products/boot.jpg"
+              alt="Leather Loafers"
+              width="150"
+              height="150"
+            />
+
+            <div class="cart-item-details">
+              <h3 class="product-name"><a href="product.html">Leather Loafers</a></h3>
+              <div class="product-brand">Brand: Wayfare</div>
+              <div class="product-sku">SKU: WF-4031</div>
+              <div class="product-opts">Size: 9 • Color: Tan</div>
+
+              <div class="item-actions">
+                <a href="#" class="action-link">Edit</a>
+                <a href="#" class="action-link">Save for later</a>
+                <a href="#" class="action-link">Move to wishlist</a>
+                <a href="#" class="action-link remove">Remove</a>
+              </div>
+            </div>
+
+            <div class="cart-item-price">
+              <div class="price-current">$119.00</div>
+            </div>
+
+            <div class="cart-item-qty">
+              <div
+                class="quantity-selector"
+                role="group"
+                aria-label="Quantity selector for Leather Loafers"
+              >
+                <button class="quantity-btn" aria-label="Decrease quantity">−</button>
+                <input class="quantity-input" type="number" min="1" max="5" value="2" />
+                <button class="quantity-btn" aria-label="Increase quantity">＋</button>
+              </div>
+            </div>
+
+            <div class="cart-item-subtotal">
+              <div class="subtotal-amount">$238.00</div>
+            </div>
+          </article>
+
+          <!-- Cart item 3 -->
+          <article class="cart-item">
+            <img
+              class="cart-item-image"
+              src="images/products/tote.jpg"
+              alt="Minimal Leather Tote"
+              width="150"
+              height="150"
+            />
+
+            <div class="cart-item-details">
+              <h3 class="product-name"><a href="product.html">Minimal Leather Tote</a></h3>
+              <div class="product-brand">Brand: Atelier</div>
+              <div class="product-sku">SKU: AT-2232</div>
+              <div class="product-opts">Color: Black</div>
+
+              <div class="item-actions">
+                <a href="#" class="action-link">Edit</a>
+                <a href="#" class="action-link">Save for later</a>
+                <a href="#" class="action-link">Move to wishlist</a>
+                <a href="#" class="action-link remove">Remove</a>
+              </div>
+            </div>
+
+            <div class="cart-item-price">
+              <div class="price-current">$179.00</div>
+            </div>
+
+            <div class="cart-item-qty">
+              <div
+                class="quantity-selector"
+                role="group"
+                aria-label="Quantity selector for Minimal Leather Tote"
+              >
+                <button class="quantity-btn" aria-label="Decrease quantity">−</button>
+                <input class="quantity-input" type="number" min="1" max="2" value="1" />
+                <button class="quantity-btn" aria-label="Increase quantity">＋</button>
+              </div>
+            </div>
+
+            <div class="cart-item-subtotal">
+              <div class="subtotal-amount">$179.00</div>
+            </div>
+          </article>
+
+          <!-- Empty cart state (hidden by default). Remove .hidden to display empty state -->
+          <div class="empty-cart hidden" aria-hidden="true">
+            <h3>Your cart is empty</h3>
+            <p>
+              Looks like you haven't added anything yet. Explore our categories to find something
+              you love.
+            </p>
+            <a href="categories.html" class="btn-primary">Start Shopping</a>
+
+            <div class="suggestions">
+              <h4>Suggested categories</h4>
+              <ul>
+                <li><a href="categories.html">Women's Clothing</a></li>
+                <li><a href="categories.html">Footwear</a></li>
+                <li><a href="categories.html">Accessories</a></li>
+              </ul>
+            </div>
+
+            <div class="recently-viewed">
+              <h4>Recently viewed</h4>
+              <div class="recent-grid">
+                <img src="images/products/dress-01-thumb.jpg" alt="" />
+                <img src="images/products/shoe-01-thumb.jpg" alt="" />
+                <img src="images/products/bag-01-thumb.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+
+          
+    </main>
 
     <!-- Footer -->
     <footer class="site-footer" role="contentinfo" aria-label="Site Footer">
