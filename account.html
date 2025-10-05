@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>StyleHub — Account</title>
+    <meta name="description" content="User account dashboard" />
+    <link rel="icon" type="image/png" href="images/logo.png" />
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/ecommerce-features.css" />
+    <link rel="stylesheet" href="css/pages/account.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="index.html" class="logo">StyleHub</a>
+
+        <nav class="main-nav" aria-label="Primary navigation">
+          <ul class="home-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="support.html">Support</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-right">
+          <form action="#" method="get" class="search-form" role="search">
+            <label for="search" class="sr-only">Search</label>
+            <input
+              id="search"
+              name="q"
+              type="search"
+              placeholder="Search products"
+              class="home-search"
+            />
+          </form>
+
+          <a class="nav-link" href="cart.html">Cart</a>
+          <a class="nav-link" href="account.html">Account</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="account-dashboard">
+      <aside class="account-sidebar" aria-label="Account navigation">
+        <div class="sidebar-profile">
+          <img src="images/profile.jpg" alt="User avatar" class="avatar" />
+          <div class="sidebar-name">Hi, <strong>Jane</strong></div>
+          <div class="sidebar-email">jane.doe@example.com</div>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="Account sections">
+          <div class="nav-section">
+            <div class="section-title">Profile</div>
+            <a class="nav-link active" href="#profile">Personal information</a>
+            <a class="nav-link" href="#security">Password & security</a>
+            <a class="nav-link" href="#comms">Communication preferences</a>
+            <a class="nav-link" href="#settings">Account settings</a>
+          </div>
+
+          <div class="nav-section">
+            <div class="section-title">Orders</div>
+            <a class="nav-link" href="#orders">Order history</a>
+            <a class="nav-link" href="#track">Track orders</a>
+            <a class="nav-link" href="#returns">Returns & requests</a>
+            <a class="nav-link" href="#reorder">Reorder items</a>
+          </div>
+
+          <div class="nav-section">
+            <div class="section-title">Shopping</div>
+            <a class="nav-link" href="#wishlist">Wishlist</a>
+            <a class="nav-link" href="#recent">Recently viewed</a>
+            <a class="nav-link" href="#saved">Saved for later</a>
+            <a class="nav-link" href="#sizeprefs">Size preferences</a>
+          </div>
+
+          <div class="nav-section">
+            <div class="section-title">Addresses</div>
+            <a class="nav-link" href="#addresses">Address book</a>
+            <a class="nav-link" href="#payments">Payment methods</a>
+          </div>
+        </nav>
+      </aside>
+
+      <section class="main-content">
+        <header class="dashboard-hero">
+          <h1>Welcome back, Jane</h1>
+          <p class="muted">Manage your account, orders and preferences from one place.</p>
+
+          <div class="quick-stats">
+            <div class="stat">
+              <div class="stat-number">24</div>
+              <div class="stat-label">Total orders</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">12</div>
+              <div class="stat-label">Saved items</div>
+            </div>
+            <div class="stat">
+              <div class="stat-number">420</div>
+              <div class="stat-label">Reward points</div>
+            </div>
+          </div>
+        </header>
+
+        <section id="recent-orders" class="recent-orders">
+          <h2>Recent orders</h2>
+          <div class="order-list">
+            <article class="order-card">
+              <div class="order-header">
+                <div>
+                  <div class="order-number">Order SH-20254</div>
+                  <div class="order-date">Aug 11, 2025</div>
+                </div>
+                <div class="order-status status-shipped">Shipped</div>
+              </div>
+
+              <div class="order-items">
+                <img class="order-item-image" src="images/products/dress.jpg" alt="" />
+                <img class="order-item-image" src="images/products/boot.jpg" alt="" />
+                <img class="order-item-image" src="images/products/waffle.jpg" alt="" />
+              </div>
+
+              <div class="order-footer">
+                <div class="order-total">$557.28</div>
+                <div class="order-actions">
+                  <a class="action-btn" href="order-details.html">Details</a>
+                  <a class="action-btn" href="track.html">Track</a>
+                  <button class="action-btn primary">Reorder</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="order-card">
+              <div class="order-header">
+                <div>
+                  <div class="order-number">Order SH-19999</div>
+                  <div class="order-date">Jul 02, 2025</div>
+                </div>
+                <div class="order-status status-delivered">Delivered</div>
+              </div>
+
+              <div class="order-items">
+                <img class="order-item-image" src="images/products/shirt.jpg" alt="" />
+                <img class="order-item-image" src="images/products/belt.jpg" alt="" />
+              </div>
+
+              <div class="order-footer">
+                <div class="order-total">$129.00</div>
+                <div class="order-actions">
+                  <a class="action-btn" href="order-details.html">Details</a>
+                  <button class="action-btn">Return</button>
+                  <button class="action-btn primary">Reorder</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="order-card">
+              <div class="order-header">
+                <div>
+                  <div class="order-number">Order SH-18729</div>
+                  <div class="order-date">May 18, 2025</div>
+                </div>
+                <div class="order-status status-processing">Processing</div>
+              </div>
+
+              <div class="order-items">
+                <img class="order-item-image" src="images/products/beanie.jpg" alt="" />
+              </div>
+
+              <div class="order-footer">
+                <div class="order-total">$39.00</div>
+                <div class="order-actions">
+                  <a class="action-btn" href="order-details.html">Details</a>
+                  <button class="action-btn primary">Reorder</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="profile" class="profile-section">
+          <h2>Personal information</h2>
+          <form class="profile-form" action="#" method="post" enctype="multipart/form-data">
+            <div class="profile-grid">
+              <div class="profile-left">
+                <label class="photo-upload">
+                  <img src="images/profile.jpg" alt="Profile photo" class="profile-photo" />
+                  <input type="file" name="avatar" accept="image/*" />
+                  <div class="photo-hint">Upload profile photo</div>
+                </label>
+              </div>
+
+              <div class="profile-right">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="first">First name</label>
+                    <input
+                      id="first"
+                      class="form-input"
+                      name="first_name"
+                      type="text"
+                      value="Jane"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="last">Last name</label>
+                    <input
+                      id="last"
+                      class="form-input"
+                      name="last_name"
+                      type="text"
+                      value="Doe"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="acct-email">Email</label>
+                    <input
+                      id="acct-email"
+                      class="form-input"
+                      name="email"
+                      type="email"
+                      value="jane.doe@example.com"
+                      required
+                    />
+                    <div class="email-verified">Verified</div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="phone-account">Phone</label>
+                    <input
+                      id="phone-account"
+                      class="form-input"
+                      name="phone"
+                      type="tel"
+                      value="+1 (555) 123-4567"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="dob">Date of birth</label>
+                    <input id="dob" class="form-input" name="dob" type="date" />
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="gender">Gender</label>
+                    <select id="gender" class="form-input" name="gender">
+                      <option value="">Prefer not to say</option>
+                      <option>Female</option>
+                      <option>Male</option>
+                      <option>Non-binary</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-actions">
+                  <button class="action-btn primary" type="submit">Save changes</button>
+                  <button class="action-btn" type="button">Cancel</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </section>
+
+        <section id="comms" class="comms-section">
+          <h2>Communication preferences</h2>
+          <form class="comms-form" action="#" method="post">
+            <label class="preference"
+              ><input type="checkbox" checked /> Email newsletter subscription</label
+            >
+            <label class="preference"
+              ><input type="checkbox" checked /> SMS notifications for orders</label
+            >
+            <label class="preference"><input type="checkbox" /> Promotional emails</label>
+            <label class="preference"
+              ><input type="checkbox" checked /> New arrivals notifications</label
+            >
+            <label class="preference"><input type="checkbox" /> Sale & discount alerts</label>
+
+            <div class="form-actions">
+              <button class="action-btn primary" type="submit">Save preferences</button>
+            </div>
+          </form>
+        </section>
+
+        <section id="sizeprefs" class="sizeprefs-section">
+          <h2>Size preferences</h2>
+          <form class="size-form" action="#" method="post">
+            <div class="size-grid">
+              <div>
+                <label class="form-label">Clothing size</label>
+                <select class="form-input" name="clothing_size">
+                  <option>M (recommended)</option>
+                  <option>S</option>
+                  <option>L</option>
+                  <option>XL</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="form-label">Shoe size</label>
+                <select class="form-input" name="shoe_size">
+                  <option>9 (US)</option>
+                  <option>8</option>
+                  <option>10</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="form-label">Preferred brands</label>
+                <input class="form-input" name="brands" placeholder="Comma separated" />
+              </div>
+
+              <div>
+                <label class="form-label">Style preferences</label>
+                <input
+                  class="form-input"
+                  name="style_prefs"
+                  placeholder="Casual, Minimal, Sporty"
+                />
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button class="action-btn primary" type="submit">Save size preferences</button>
+            </div>
+          </form>
+        </section>
+
+        <section id="wishlist" class="wishlist-section">
+          <h2>Wishlist</h2>
+          <div class="wishlist-grid">
+            <article class="wish-card">
+              <img src="images/products/dress.jpg" alt="" />
+              <div class="wish-meta">
+                <div class="wish-title">Floral Midi Dress</div>
+                <div class="wish-price">$99</div>
+                <div class="wish-actions">
+                  <a class="action-btn" href="product.html">View</a>
+                  <button class="action-btn primary">Add to cart</button>
+                  <button class="action-btn">Remove</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="wish-card">
+              <img src="images/products/watch.jpg" alt="" />
+              <div class="wish-meta">
+                <div class="wish-title">Minimal Watch</div>
+                <div class="wish-price">$199</div>
+                <div class="wish-actions">
+                  <a class="action-btn" href="product.html">View</a>
+                  <button class="action-btn primary">Add to cart</button>
+                  <button class="action-btn">Remove</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="wish-card">
+              <img src="images/products/tote.jpg" alt="" />
+              <div class="wish-meta">
+                <div class="wish-title">Leather Tote</div>
+                <div class="wish-price">$179</div>
+                <div class="wish-actions">
+                  <a class="action-btn" href="product.html">View</a>
+                  <button class="action-btn primary">Add to cart</button>
+                  <button class="action-btn">Remove</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="addresses" class="addresses-section">
+          <h2>Address book</h2>
+          <div class="addresses-grid">
+            <div class="address-card default">
+              <div class="address-title">Default shipping address</div>
+              <address>
+                Jane Doe<br />
+                123 Main St<br />
+                San Francisco, CA 94103<br />
+                United States
+              </address>
+              <div class="address-actions">
+                <button class="action-btn">Edit</button>
+                <button class="action-btn">Remove</button>
+                <button class="action-btn primary">Set as default</button>
+              </div>
+            </div>
+
+            <div class="address-card">
+              <div class="address-title">Billing address</div>
+              <address>
+                Jane Doe<br />
+                88 Market Ave<br />
+                Oakland, CA 94607<br />
+                United States
+              </address>
+              <div class="address-actions">
+                <button class="action-btn">Edit</button>
+                <button class="action-btn">Remove</button>
+                <button class="action-btn">Set as default</button>
+              </div>
+            </div>
+
+            <form class="address-new" action="#" method="post">
+              <h3>Add new address</h3>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">Full name</label><input class="form-input" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Phone</label><input class="form-input" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group full">
+                  <label class="form-label">Address line 1</label><input class="form-input" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">City</label><input class="form-input" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">State</label><input class="form-input" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">ZIP</label><input class="form-input" />
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button class="action-btn primary" type="submit">Add address</button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo" aria-label="Site Footer">
+      <div class="footer-inner">
+        <div class="footer-col footer-about">
+          <a href="index.html" class="footer-logo">StyleHub</a>
+          <p class="footer-desc">
+            Modern fashion for men and women. Free shipping over $75 and easy returns.
+          </p>
+          <address class="footer-contact">
+            <a href="mailto:hello@stylehub.example">hello@stylehub.example</a><br />
+            <a href="tel:+1234567890">+1 (234) 567-890</a>
+          </address>
+        </div>
+
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul class="footer-list">
+            <li><a href="categories.html">Women's Clothing</a></li>
+            <li><a href="categories.html">Men's Clothing</a></li>
+            <li><a href="categories.html">Footwear</a></li>
+            <li><a href="categories.html">Accessories</a></li>
+            <li><a href="categories.html">Sale</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul class="footer-list">
+            <li><a href="support.html">Customer Service</a></li>
+            <li><a href="support.html#shipping">Shipping & Returns</a></li>
+            <li><a href="support.html#faq">FAQ</a></li>
+            <li><a href="support.html#privacy">Privacy Policy</a></li>
+            <li><a href="support.html#terms">Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-newsletter">
+          <h4>Join & Save</h4>
+          <p class="newsletter-text">Sign up and get 10% off your first order.</p>
+          <form
+            class="footer-newsletter-form"
+            action="#"
+            method="post"
+            aria-label="Subscribe to newsletter"
+          >
+            <label for="footer-email" class="sr-only">Email address</label>
+            <input
+              id="footer-email"
+              type="email"
+              name="email"
+              placeholder="you@example.com"
+              required
+            />
+            <button type="submit">Subscribe</button>
+          </form>
+
+          <div class="social-row" aria-label="Follow us">
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="4" />
+                <path d="M16 11.37a4 4 0 1 1-7.999.001A4 4 0 0 1 16 11.37z" />
+                <path d="M17.5 6.5h.01" />
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Facebook">
+              <svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+                <path d="M18 2h-3a4 4 0 0 0-4 4v3H8v3h3v7h3v-7h2.5L18 12h-2V6a1 1 0 0 1 1-1h2z" />
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter">
+              <svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+                <path
+                  d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 22.43 1s-2 .89-3.17 1.31A4.5 4.5 0 0 0 16.11 1c-2.66 0-4.77 2.39-4.77 5.34 0 .42.05.82.14 1.21C7.69 7.6 4.07 5.97 1.64 3.39c-.46.79-.72 1.71-.72 2.69 0 1.86.9 3.51 2.3 4.48a4.5 4.5 0 0 1-2.16-.6s.01.02-.01.03c0 2.59 1.82 4.75 4.24 5.24a4.5 4.5 0 0 1-2.13.08c.6 2.06 2.34 3.56 4.4 3.6A9 9 0 0 1 1 19.54 12.73 12.73 0 0 0 6.92 21c8.3 0 12.85-7.23 12.85-13.5l-.01-.62A9.22 9.22 0 0 0 23 3z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">© <span id="year">2024</span> StyleHub. All rights reserved.</p>
+        <div class="bottom-links">
+          <a href="about.html">About</a>
+          <a href="support.html">Contact</a>
+          <a href="support.html#privacy">Privacy</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
