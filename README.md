@@ -178,11 +178,6 @@ stylehub/
 
 1. Clone or download the project folder.
 2. Open `index.html` directly in your browser.
-3. (Optional) For the map in **about.html**, insert your Google Maps API key in:
-   ```
-   https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=Your+Address
-   ```
-4. Adjust image paths inside the `/images/` directory if needed.
 
 ---
 
