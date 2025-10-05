@@ -47,7 +47,222 @@
       </div>
     </header>
 
-    <main class="checkout-page"></main>
+    <main class="checkout-page">
+      <div class="checkout-container">
+        <!-- radios controlling steps -->
+        <input type="radio" name="checkout-step" id="step1" checked />
+        <input type="radio" name="checkout-step" id="step2" />
+        <input type="radio" name="checkout-step" id="step3" />
+        <input type="radio" name="checkout-step" id="step4" />
+
+        <!-- Progress -->
+        <div class="checkout-progress" role="progressbar" aria-label="Checkout progress">
+          <div class="progress-step step-1">
+            <div class="step-number">1</div>
+            <div class="step-title">Shipping</div>
+          </div>
+          <div class="progress-step step-2">
+            <div class="step-number">2</div>
+            <div class="step-title">Payment</div>
+          </div>
+          <div class="progress-step step-3">
+            <div class="step-number">3</div>
+            <div class="step-title">Review</div>
+          </div>
+          <div class="progress-step step-4">
+            <div class="step-number">4</div>
+            <div class="step-title">Confirmation</div>
+          </div>
+        </div>
+
+        <div class="checkout-grid">
+          <!-- LEFT: content panels -->
+          <section class="checkout-content">
+            <!-- STEP 1: Shipping Information -->
+            <div class="step-panel panel-1">
+              <h2>Shipping Information</h2>
+
+              <div class="customer-type">
+                <label><input type="radio" name="customer" checked /> Checkout as guest</label>
+                <label><input type="radio" name="customer" /> Returning customer (login)</label>
+                <label class="create-account"
+                  ><input type="checkbox" name="create_account" /> Create an account</label
+                >
+              </div>
+
+              <form class="shipping-form" method="post" action="#" novalidate>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="first-name">First name</label>
+                    <input
+                      class="form-input"
+                      id="first-name"
+                      name="first_name"
+                      type="text"
+                      required
+                    />
+                    <div class="validation-message">First name is required</div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="last-name">Last name</label>
+                    <input
+                      class="form-input"
+                      id="last-name"
+                      name="last_name"
+                      type="text"
+                      required
+                    />
+                    <div class="validation-message">Last name is required</div>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="email">Email</label>
+                    <input class="form-input" id="email" name="email" type="email" required />
+                    <div class="validation-message">Please enter a valid email</div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="email-confirm">Confirm email</label>
+                    <input
+                      class="form-input"
+                      id="email-confirm"
+                      name="email_confirm"
+                      type="email"
+                      required
+                    />
+                    <div class="validation-message">Please confirm email</div>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="phone">Phone</label>
+                    <input
+                      class="form-input"
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      inputmode="tel"
+                      required
+                    />
+                    <div class="validation-message">Phone required</div>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group full">
+                    <label class="form-label" for="address1">Address line 1</label>
+                    <input class="form-input" id="address1" name="address1" type="text" required />
+                    <div class="validation-message">Address required</div>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group full">
+                    <label class="form-label" for="address2">Address line 2 (optional)</label>
+                    <input class="form-input" id="address2" name="address2" type="text" />
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="city">City</label>
+                    <input class="form-input" id="city" name="city" type="text" required />
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="state">State / Province</label>
+                    <select id="state" class="form-input" name="state" required>
+                      <option value="">Select state</option>
+                      <option>CA</option>
+                      <option>NY</option>
+                      <option>TX</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="zip">ZIP / Postal</label>
+                    <input
+                      class="form-input"
+                      id="zip"
+                      name="zip"
+                      type="text"
+                      required
+                      pattern="\d{3,10}"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group full">
+                    <label class="form-label" for="country">Country</label>
+                    <select id="country" class="form-input" name="country" required>
+                      <option value="">Select country</option>
+                      <option>United States</option>
+                      <option>United Kingdom</option>
+                      <option>Canada</option>
+                    </select>
+                  </div>
+                </div>
+
+                <fieldset class="shipping-options" aria-label="Shipping options">
+                  <legend class="form-label">Shipping method</legend>
+                  <label class="ship-opt"
+                    ><input type="radio" name="ship" checked /> Standard (5-7 business days) — Free
+                    over $75</label
+                  >
+                  <label class="ship-opt"
+                    ><input type="radio" name="ship" /> Express (2-3 business days) — $9.99</label
+                  >
+                  <label class="ship-opt"
+                    ><input type="radio" name="ship" /> Overnight (next business day) —
+                    $19.99</label
+                  >
+                  <label class="ship-opt"
+                    ><input type="radio" name="ship" /> Store pickup (select location)</label
+                  >
+                  <div class="store-locations">
+                    <label for="store-select" class="form-label">Pickup location</label>
+                    <select id="store-select" class="form-input">
+                      <option>Choose a store</option>
+                      <option>Downtown — 123 Main St</option>
+                      <option>Suburb — 88 Market Ave</option>
+                    </select>
+                    <div class="map-placeholder" aria-hidden="true">[Map placeholder]</div>
+                  </div>
+                </fieldset>
+
+                <div class="form-row">
+                  <div class="form-group full">
+                    <label class="form-label" for="instructions"
+                      >Delivery instructions (optional)</label
+                    >
+                    <textarea
+                      id="instructions"
+                      class="form-input"
+                      rows="3"
+                      placeholder="Leave at front desk, ring bell, etc."
+                    ></textarea>
+                  </div>
+                </div>
+
+                <div class="form-row small-opts">
+                  <label><input type="checkbox" name="gift" /> Add gift message</label>
+                  <label
+                    ><input type="checkbox" name="signature" /> Signature required on
+                    delivery</label
+                  >
+                </div>
+
+                <div class="form-actions">
+                  <label for="step2" class="btn-primary goto">Continue to payment →</label>
+                </div>
+              </form>
+            </div>
+
+            
+    </main>
 
     <!-- Footer -->
     <footer class="site-footer" role="contentinfo" aria-label="Site Footer">
