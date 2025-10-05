@@ -186,6 +186,95 @@
           </div>
         </section>
 
+        <section id="profile" class="profile-section">
+          <h2>Personal information</h2>
+          <form class="profile-form" action="#" method="post" enctype="multipart/form-data">
+            <div class="profile-grid">
+              <div class="profile-left">
+                <label class="photo-upload">
+                  <img src="images/profile.jpg" alt="Profile photo" class="profile-photo" />
+                  <input type="file" name="avatar" accept="image/*" />
+                  <div class="photo-hint">Upload profile photo</div>
+                </label>
+              </div>
+
+              <div class="profile-right">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="first">First name</label>
+                    <input
+                      id="first"
+                      class="form-input"
+                      name="first_name"
+                      type="text"
+                      value="Jane"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="last">Last name</label>
+                    <input
+                      id="last"
+                      class="form-input"
+                      name="last_name"
+                      type="text"
+                      value="Doe"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="acct-email">Email</label>
+                    <input
+                      id="acct-email"
+                      class="form-input"
+                      name="email"
+                      type="email"
+                      value="jane.doe@example.com"
+                      required
+                    />
+                    <div class="email-verified">Verified</div>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="phone-account">Phone</label>
+                    <input
+                      id="phone-account"
+                      class="form-input"
+                      name="phone"
+                      type="tel"
+                      value="+1 (555) 123-4567"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="dob">Date of birth</label>
+                    <input id="dob" class="form-input" name="dob" type="date" />
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="gender">Gender</label>
+                    <select id="gender" class="form-input" name="gender">
+                      <option value="">Prefer not to say</option>
+                      <option>Female</option>
+                      <option>Male</option>
+                      <option>Non-binary</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-actions">
+                  <button class="action-btn primary" type="submit">Save changes</button>
+                  <button class="action-btn" type="button">Cancel</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </section>
+
       
     </main>
 
