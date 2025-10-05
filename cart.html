@@ -291,7 +291,74 @@
           </section>
         </section>
 
-        
+        <!-- RIGHT: Summary -->
+        <aside class="cart-summary" aria-labelledby="summary-heading">
+          <h2 id="summary-heading">Order summary</h2>
+
+          <div class="summary-row">
+            <div>Subtotal</div>
+            <div class="summary-value">$516.00</div>
+          </div>
+
+          <div class="summary-row shipping-options">
+            <div>
+              <strong>Shipping</strong>
+              <form class="shipping-form" onsubmit="return false;">
+                <label class="ship-option"
+                  ><input type="radio" name="shipping" checked /> Standard (5-7 days) — Free over
+                  $75</label
+                >
+                <label class="ship-option"
+                  ><input type="radio" name="shipping" /> Express (2-3 days) — $9.99</label
+                >
+                <label class="ship-option"
+                  ><input type="radio" name="shipping" /> Overnight (1 day) — $19.99</label
+                >
+                <label class="ship-option"
+                  ><input type="radio" name="shipping" /> Store pickup — Free</label
+                >
+              </form>
+            </div>
+            <div class="summary-value shipping-cost">—</div>
+          </div>
+
+          <div class="summary-row">
+            <div>Estimated tax</div>
+            <div class="summary-value">$41.28</div>
+          </div>
+
+          <div class="summary-row total">
+            <div>Total</div>
+            <div class="summary-value total-amount">$557.28</div>
+          </div>
+
+          <div class="promo-code">
+            <label for="promo">Promo code</label>
+            <div class="promo-input">
+              <input id="promo" class="promo-field" type="text" placeholder="SPRING10" />
+              <button class="promo-btn" type="button">Apply</button>
+            </div>
+            <div class="applied-discounts">
+              <ul>
+                <li>
+                  SPRING10 — <strong>- $10.00</strong> <a href="#" class="action-link">Remove</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="summary-actions">
+            <button class="btn-primary full-width">Proceed to Checkout</button>
+            <button class="btn-secondary full-width">Update Cart</button>
+            <a href="categories.html" class="btn-link full-width">Continue Shopping</a>
+          </div>
+
+          <div class="mini-security">
+            <span class="mini-badge">🔒 Secured payment</span>
+            <span class="mini-badge">🚚 Free returns</span>
+          </div>
+        </aside>
+      </div>
     </main>
 
     <!-- Footer -->
