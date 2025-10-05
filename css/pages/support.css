@@ -1,0 +1,354 @@
+:root {
+  --primary-color: #7c3aed;
+  --muted: #64748b;
+  --surface: #fff;
+  --panel-shadow: 0 10px 30px rgba(17, 17, 17, 0.06);
+}
+
+/* base layout */
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  margin: 0;
+  color: #111;
+  background: #fbfcfe;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.site-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 68px;
+  background: #fff;
+  box-shadow: 0 1px 0 rgba(17, 17, 17, 0.04);
+}
+.header-inner {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+/* hero */
+.support-hero {
+  padding: 32px 0 8px;
+  border-bottom: 1px solid #eef2f7;
+}
+.support-hero .lead {
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* layout grid */
+.support-grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 24px;
+  margin-top: 24px;
+  align-items: start;
+}
+.faq-area {
+  background: transparent;
+}
+.support-actions {
+  background: transparent;
+}
+
+/* FAQ styles using <details> */
+.faq-area h2 {
+  margin: 0 0 12px;
+}
+.category-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 14px 0 8px;
+}
+
+.faq-item {
+  border: 1px solid #e6edf3;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: var(--panel-shadow);
+}
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+.faq-question {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+}
+.faq-question .faq-icon {
+  margin-left: auto;
+  color: var(--muted);
+  transition: transform 0.25s ease;
+}
+
+.faq-item[open] summary {
+  background: var(--primary-color);
+  color: #fff;
+}
+.faq-item[open] .faq-icon {
+  transform: rotate(180deg);
+  color: #fff;
+}
+
+.faq-answer {
+  background: #f8fafc;
+  padding: 0 16px 16px;
+}
+.faq-answer-content {
+  padding-top: 12px;
+  color: #374151;
+  line-height: 1.6;
+}
+
+/* contact panel & forms */
+.contact-panel,
+.order-lookup,
+.returns-panel,
+.support-contacts {
+  background: #fff;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: var(--panel-shadow);
+  margin-bottom: 16px;
+}
+.contact-panel h3,
+.order-lookup h3,
+.returns-panel h3,
+.support-contacts h3 {
+  margin-top: 0;
+}
+
+.form-label {
+  display: block;
+  margin-top: 8px;
+  margin-bottom: 6px;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+.form-input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #e6eef6;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+.form-input[type="file"] {
+  padding: 6px 8px;
+}
+.contact-form .form-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+.btn-primary {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+}
+.btn-secondary {
+  background: #fff;
+  color: var(--primary-color);
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #e6eef6;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* order lookup and return form */
+.lookup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.return-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* support contacts */
+.contact-row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 8px 0;
+  border-bottom: 1px dashed #eef2f7;
+}
+.contact-row:last-child {
+  border-bottom: none;
+}
+.contact-icon {
+  font-size: 1.4rem;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 8px;
+}
+
+/* tools grid */
+.tools-grid {
+  margin: 28px 0;
+  align-self: center;
+}
+.self-tools .tool-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+.tool-card {
+  background: #fff;
+  padding: 14px;
+  border-radius: 10px;
+  box-shadow: var(--panel-shadow);
+}
+.tool-card h4 {
+  margin-top: 0;
+}
+.btn-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* chat mockup (bottom-right) */
+.chat-mockup {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 300px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 18px 40px rgba(2, 6, 23, 0.12);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  z-index: 1200;
+}
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  border-bottom: 1px solid #eef2f7;
+  font-weight: 700;
+}
+.chat-hours {
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+.chat-body {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: #fbfcfe;
+}
+.chat-suggestion {
+  background: #fff;
+  padding: 8px 10px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.chat-form {
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+  border-top: 1px solid #eef2f7;
+}
+.chat-input {
+  flex: 1;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #e6eef6;
+}
+.chat-send {
+  background: var(--primary-color);
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/* small utilities */
+.lead {
+  color: var(--muted);
+}
+.muted {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* responsive */
+@media (max-width: 1000px) {
+  .support-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .self-tools .tool-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tools-grid {
+    margin-top: 18px;
+  }
+  .chat-mockup {
+    right: 12px;
+    bottom: 12px;
+    width: 220px;
+  }
+}
+
+@media (max-width: 520px) {
+  .support-hero {
+    padding: 20px 0 8px;
+  }
+  .self-tools .tool-cards {
+    grid-template-columns: 1fr;
+  }
+  .tool-card {
+    padding: 12px;
+  }
+  .chat-mockup {
+    right: 8px;
+    bottom: 8px;
+    width: 200px;
+  }
+}
