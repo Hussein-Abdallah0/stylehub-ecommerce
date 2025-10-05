@@ -384,6 +384,73 @@
           </div>
         </section>
 
+        <section id="addresses" class="addresses-section">
+          <h2>Address book</h2>
+          <div class="addresses-grid">
+            <div class="address-card default">
+              <div class="address-title">Default shipping address</div>
+              <address>
+                Jane Doe<br />
+                123 Main St<br />
+                San Francisco, CA 94103<br />
+                United States
+              </address>
+              <div class="address-actions">
+                <button class="action-btn">Edit</button>
+                <button class="action-btn">Remove</button>
+                <button class="action-btn primary">Set as default</button>
+              </div>
+            </div>
+
+            <div class="address-card">
+              <div class="address-title">Billing address</div>
+              <address>
+                Jane Doe<br />
+                88 Market Ave<br />
+                Oakland, CA 94607<br />
+                United States
+              </address>
+              <div class="address-actions">
+                <button class="action-btn">Edit</button>
+                <button class="action-btn">Remove</button>
+                <button class="action-btn">Set as default</button>
+              </div>
+            </div>
+
+            <form class="address-new" action="#" method="post">
+              <h3>Add new address</h3>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">Full name</label><input class="form-input" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Phone</label><input class="form-input" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group full">
+                  <label class="form-label">Address line 1</label><input class="form-input" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">City</label><input class="form-input" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">State</label><input class="form-input" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">ZIP</label><input class="form-input" />
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button class="action-btn primary" type="submit">Add address</button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </section>
     </main>
 
     <!-- Footer -->
