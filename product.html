@@ -48,7 +48,97 @@
       </div>
     </header>
 
-    <main class="product-page"></main>
+    <main class="product-page">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="categories.html">Women's Clothing</a></li>
+          <li><a href="categories.html">Dresses</a></li>
+          <li aria-current="page">Floral Midi Dress</li>
+        </ol>
+      </nav>
+
+      <section class="product-top">
+        <div class="product-gallery">
+          <!-- gallery radios + thumbnails -->
+          <input type="radio" name="gallery" id="g1" checked />
+          <label for="g1" class="thumbnail"
+            ><img src="images/product/floral1.jpg" alt="Front thumb" loading="lazy"
+          /></label>
+
+          <input type="radio" name="gallery" id="g2" />
+          <label for="g2" class="thumbnail"
+            ><img src="images/product/floral2.jpg" alt="Back thumb" loading="lazy"
+          /></label>
+
+          <input type="radio" name="gallery" id="g3" />
+          <label for="g3" class="thumbnail"
+            ><img src="images/product/floral3.jpg" alt="Side thumb" loading="lazy"
+          /></label>
+
+          <input type="radio" name="gallery" id="g4" />
+          <label for="g4" class="thumbnail"
+            ><img src="images/product/floral4.jpg" alt="Detail thumb" loading="lazy"
+          /></label>
+
+          <input type="radio" name="gallery" id="g5" />
+          <label for="g5" class="thumbnail"
+            ><img src="images/product/floral5.jpg" alt="Model thumb" loading="lazy"
+          /></label>
+
+          <input type="checkbox" id="zoom-toggle" class="zoom-toggle" />
+
+          <div class="gallery-main" aria-live="polite">
+            <div class="main-image-container">
+              <img
+                class="main-image img1"
+                src="images/product/floral1.jpg"
+                alt="Floral Midi Dress - front"
+              />
+              <img
+                class="main-image img2"
+                src="images/product/floral2.jpg"
+                alt="Floral Midi Dress - back"
+              />
+              <img
+                class="main-image img3"
+                src="images/product/floral3.jpg"
+                alt="Floral Midi Dress - side"
+              />
+              <img
+                class="main-image img4"
+                src="images/product/floral4.jpg"
+                alt="Floral Midi Dress - detail"
+              />
+              <img
+                class="main-image img5"
+                src="images/product/floral5.jpg"
+                alt="Floral Midi Dress - model"
+              />
+
+              <label for="zoom-toggle" class="zoom-btn" aria-label="Open zoom">🔍</label>
+            </div>
+
+            <div class="thumbnail-strip mobile-thumbs">
+              <label for="g1" class="thumb-inline"
+                ><img src="images/product/floral1.jpg" alt=""
+              /></label>
+              <label for="g2" class="thumb-inline"
+                ><img src="images/product/floral2.jpg" alt=""
+              /></label>
+              <label for="g3" class="thumb-inline"
+                ><img src="images/product/floral3.jpg" alt=""
+              /></label>
+              <label for="g4" class="thumb-inline"
+                ><img src="images/product/floral4.jpg" alt=""
+              /></label>
+              <label for="g5" class="thumb-inline"
+                ><img src="images/product/floral5.jpg" alt=""
+              /></label>
+            </div>
+
+            
+    </main>
 
     <!-- Footer -->
     <footer class="site-footer" role="contentinfo" aria-label="Site Footer">
