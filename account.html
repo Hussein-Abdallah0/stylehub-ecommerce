@@ -275,6 +275,71 @@
           </form>
         </section>
 
+        <section id="comms" class="comms-section">
+          <h2>Communication preferences</h2>
+          <form class="comms-form" action="#" method="post">
+            <label class="preference"
+              ><input type="checkbox" checked /> Email newsletter subscription</label
+            >
+            <label class="preference"
+              ><input type="checkbox" checked /> SMS notifications for orders</label
+            >
+            <label class="preference"><input type="checkbox" /> Promotional emails</label>
+            <label class="preference"
+              ><input type="checkbox" checked /> New arrivals notifications</label
+            >
+            <label class="preference"><input type="checkbox" /> Sale & discount alerts</label>
+
+            <div class="form-actions">
+              <button class="action-btn primary" type="submit">Save preferences</button>
+            </div>
+          </form>
+        </section>
+
+        <section id="sizeprefs" class="sizeprefs-section">
+          <h2>Size preferences</h2>
+          <form class="size-form" action="#" method="post">
+            <div class="size-grid">
+              <div>
+                <label class="form-label">Clothing size</label>
+                <select class="form-input" name="clothing_size">
+                  <option>M (recommended)</option>
+                  <option>S</option>
+                  <option>L</option>
+                  <option>XL</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="form-label">Shoe size</label>
+                <select class="form-input" name="shoe_size">
+                  <option>9 (US)</option>
+                  <option>8</option>
+                  <option>10</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="form-label">Preferred brands</label>
+                <input class="form-input" name="brands" placeholder="Comma separated" />
+              </div>
+
+              <div>
+                <label class="form-label">Style preferences</label>
+                <input
+                  class="form-input"
+                  name="style_prefs"
+                  placeholder="Casual, Minimal, Sporty"
+                />
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button class="action-btn primary" type="submit">Save size preferences</button>
+            </div>
+          </form>
+        </section>
+
       
     </main>
 
