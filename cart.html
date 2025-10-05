@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>StyleHub — Shopping Cart</title>
+    <meta name="description" content="Your shopping cart — StyleHub" />
+    <link rel="icon" type="image/png" href="images/logo.png" />
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/ecommerce-features.css" />
+    <link rel="stylesheet" href="css/pages/cart.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="index.html" class="logo">StyleHub</a>
+
+        <nav class="main-nav" aria-label="Primary navigation">
+          <ul class="home-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="support.html">Support</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-right">
+          <form action="#" method="get" class="search-form" role="search">
+            <label for="search" class="sr-only">Search</label>
+            <input
+              id="search"
+              name="q"
+              type="search"
+              placeholder="Search products"
+              class="home-search"
+            />
+          </form>
+
+          <a class="nav-link" href="cart.html">Cart</a>
+          <a class="nav-link" href="account.html">Account</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="cart-page">
+      <div class="cart-header">
+        <div class="cart-title">
+          <h1>Shopping Cart</h1>
+          <p class="item-count">3 items</p>
+        </div>
+        <div class="cart-cta">
+          <a href="categories.html" class="btn-link">← Continue shopping</a>
+          <div class="security-badges" aria-hidden="true">
+            <span class="badge ssl" title="SSL secured">🔒 SSL</span>
+            <span class="badge checkout" title="Secure checkout">✅ Secure checkout</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li aria-current="page">Cart</li>
+        </ol>
+      </nav>
+
+      <div class="cart-container">
+        <!-- LEFT: Cart Items -->
+        <section class="cart-items" aria-labelledby="cart-heading">
+          <h2 id="cart-heading" class="sr-only">Cart items</h2>
+
+          <!-- Table header (desktop) -->
+          <div class="cart-table-header">
+            <div class="col item-col">Item</div>
+            <div class="col details-col">Details</div>
+            <div class="col price-col">Price</div>
+            <div class="col qty-col">Qty</div>
+            <div class="col subtotal-col">Subtotal</div>
+          </div>
+
+          <!-- Cart item 1 -->
+          <article class="cart-item">
+            <img
+              class="cart-item-image"
+              src="images/product/floral1.jpg"
+              alt="Floral Midi Dress"
+              width="150"
+              height="150"
+            />
+
+            <div class="cart-item-details">
+              <h3 class="product-name"><a href="product.html">Floral Midi Dress</a></h3>
+              <div class="product-brand">Brand: <a href="brand.html">Meadow</a></div>
+              <div class="product-sku">SKU: MD-1245</div>
+              <div class="product-opts">Size: M • Color: Multi</div>
+
+              <div class="item-actions">
+                <a href="#" class="action-link">Edit</a>
+                <a href="#" class="action-link">Save for later</a>
+                <a href="#" class="action-link">Move to wishlist</a>
+                <a href="#" class="action-link remove">Remove</a>
+              </div>
+            </div>
+
+            <div class="cart-item-price">
+              <div class="price-current">$99.00</div>
+              <div class="price-original"><del>$149.00</del></div>
+            </div>
+
+            <div class="cart-item-qty">
+              <div
+                class="quantity-selector"
+                role="group"
+                aria-label="Quantity selector for Floral Midi Dress"
+              >
+                <button class="quantity-btn" aria-label="Decrease quantity" disabled>−</button>
+                <input class="quantity-input" type="number" min="1" max="10" value="1" />
+                <button class="quantity-btn" aria-label="Increase quantity">＋</button>
+              </div>
+            </div>
+
+            <div class="cart-item-subtotal">
+              <div class="subtotal-amount">$99.00</div>
+            </div>
+          </article>
+
+          <!-- Cart item 2 -->
+          <article class="cart-item">
+            <img
+              class="cart-item-image"
+              src="images/products/boot.jpg"
+              alt="Leather Loafers"
+              width="150"
+              height="150"
+            />
+
+            <div class="cart-item-details">
+              <h3 class="product-name"><a href="product.html">Leather Loafers</a></h3>
+              <div class="product-brand">Brand: Wayfare</div>
+              <div class="product-sku">SKU: WF-4031</div>
+              <div class="product-opts">Size: 9 • Color: Tan</div>
+
+              <div class="item-actions">
+                <a href="#" class="action-link">Edit</a>
+                <a href="#" class="action-link">Save for later</a>
+                <a href="#" class="action-link">Move to wishlist</a>
+                <a href="#" class="action-link remove">Remove</a>
+              </div>
+            </div>
+
+            <div class="cart-item-price">
+              <div class="price-current">$119.00</div>
+            </div>
+
+            <div class="cart-item-qty">
+              <div
+                class="quantity-selector"
+                role="group"
+                aria-label="Quantity selector for Leather Loafers"
+              >
+                <button class="quantity-btn" aria-label="Decrease quantity">−</button>
+                <input class="quantity-input" type="number" min="1" max="5" value="2" />
+                <button class="quantity-btn" aria-label="Increase quantity">＋</button>
+              </div>
+            </div>
+
+            <div class="cart-item-subtotal">
+              <div class="subtotal-amount">$238.00</div>
+            </div>
+          </article>
+
+          <!-- Cart item 3 -->
+          <article class="cart-item">
+            <img
+              class="cart-item-image"
+              src="images/products/tote.jpg"
+              alt="Minimal Leather Tote"
+              width="150"
+              height="150"
+            />
+
+            <div class="cart-item-details">
+              <h3 class="product-name"><a href="product.html">Minimal Leather Tote</a></h3>
+              <div class="product-brand">Brand: Atelier</div>
+              <div class="product-sku">SKU: AT-2232</div>
+              <div class="product-opts">Color: Black</div>
+
+              <div class="item-actions">
+                <a href="#" class="action-link">Edit</a>
+                <a href="#" class="action-link">Save for later</a>
+                <a href="#" class="action-link">Move to wishlist</a>
+                <a href="#" class="action-link remove">Remove</a>
+              </div>
+            </div>
+
+            <div class="cart-item-price">
+              <div class="price-current">$179.00</div>
+            </div>
+
+            <div class="cart-item-qty">
+              <div
+                class="quantity-selector"
+                role="group"
+                aria-label="Quantity selector for Minimal Leather Tote"
+              >
+                <button class="quantity-btn" aria-label="Decrease quantity">−</button>
+                <input class="quantity-input" type="number" min="1" max="2" value="1" />
+                <button class="quantity-btn" aria-label="Increase quantity">＋</button>
+              </div>
+            </div>
+
+            <div class="cart-item-subtotal">
+              <div class="subtotal-amount">$179.00</div>
+            </div>
+          </article>
+
+          <!-- Empty cart state (hidden by default). Remove .hidden to display empty state -->
+          <div class="empty-cart hidden" aria-hidden="true">
+            <h3>Your cart is empty</h3>
+            <p>
+              Looks like you haven't added anything yet. Explore our categories to find something
+              you love.
+            </p>
+            <a href="categories.html" class="btn-primary">Start Shopping</a>
+
+            <div class="suggestions">
+              <h4>Suggested categories</h4>
+              <ul>
+                <li><a href="categories.html">Women's Clothing</a></li>
+                <li><a href="categories.html">Footwear</a></li>
+                <li><a href="categories.html">Accessories</a></li>
+              </ul>
+            </div>
+
+            <div class="recently-viewed">
+              <h4>Recently viewed</h4>
+              <div class="recent-grid">
+                <img src="images/products/dress-01-thumb.jpg" alt="" />
+                <img src="images/products/shoe-01-thumb.jpg" alt="" />
+                <img src="images/products/bag-01-thumb.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Recommended / Cross-sell -->
+          <section class="recommended">
+            <h3>Complete your look</h3>
+            <div class="recommended-grid">
+              <article class="rec-card">
+                <img src="images/products/scarf.jpg" alt="Chunky Knit Scarf" />
+                <div class="rec-meta">
+                  <div class="rec-title">Chunky Knit Scarf</div>
+                  <div class="rec-price">$29</div>
+                  <a class="rec-add" href="#">Add</a>
+                </div>
+              </article>
+
+              <article class="rec-card">
+                <img src="images/products/watch.jpg" alt="Minimal Watch" />
+                <div class="rec-meta">
+                  <div class="rec-title">Minimal Watch</div>
+                  <div class="rec-price">$199</div>
+                  <a class="rec-add" href="#">Add</a>
+                </div>
+              </article>
+
+              <article class="rec-card">
+                <img src="images/products/beanie.jpg" alt="Ribbed Beanie" />
+                <div class="rec-meta">
+                  <div class="rec-title">Ribbed Beanie</div>
+                  <div class="rec-price">$19</div>
+                  <a class="rec-add" href="#">Add</a>
+                </div>
+              </article>
+
+              <article class="rec-card">
+                <img src="images/products/belt.jpg" alt="Classic Leather Belt" />
+                <div class="rec-meta">
+                  <div class="rec-title">Classic Belt</div>
+                  <div class="rec-price">$39</div>
+                  <a class="rec-add" href="#">Add</a>
+                </div>
+              </article>
+            </div>
+          </section>
+        </section>
+
+        <!-- RIGHT: Summary -->
+        <aside class="cart-summary" aria-labelledby="summary-heading">
+          <h2 id="summary-heading">Order summary</h2>
+
+          <div class="summary-row">
+            <div>Subtotal</div>
+            <div class="summary-value">$516.00</div>
+          </div>
+
+          <div class="summary-row shipping-options">
+            <div>
+              <strong>Shipping</strong>
+              <form class="shipping-form" onsubmit="return false;">
+                <label class="ship-option"
+                  ><input type="radio" name="shipping" checked /> Standard (5-7 days) — Free over
+                  $75</label
+                >
+                <label class="ship-option"
+                  ><input type="radio" name="shipping" /> Express (2-3 days) — $9.99</label
+                >
+                <label class="ship-option"
+                  ><input type="radio" name="shipping" /> Overnight (1 day) — $19.99</label
+                >
+                <label class="ship-option"
+                  ><input type="radio" name="shipping" /> Store pickup — Free</label
+                >
+              </form>
+            </div>
+            <div class="summary-value shipping-cost">—</div>
+          </div>
+
+          <div class="summary-row">
+            <div>Estimated tax</div>
+            <div class="summary-value">$41.28</div>
+          </div>
+
+          <div class="summary-row total">
+            <div>Total</div>
+            <div class="summary-value total-amount">$557.28</div>
+          </div>
+
+          <div class="promo-code">
+            <label for="promo">Promo code</label>
+            <div class="promo-input">
+              <input id="promo" class="promo-field" type="text" placeholder="SPRING10" />
+              <button class="promo-btn" type="button">Apply</button>
+            </div>
+            <div class="applied-discounts">
+              <ul>
+                <li>
+                  SPRING10 — <strong>- $10.00</strong> <a href="#" class="action-link">Remove</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="summary-actions">
+            <button class="btn-primary full-width">Proceed to Checkout</button>
+            <button class="btn-secondary full-width">Update Cart</button>
+            <a href="categories.html" class="btn-link full-width">Continue Shopping</a>
+          </div>
+
+          <div class="mini-security">
+            <span class="mini-badge">🔒 Secured payment</span>
+            <span class="mini-badge">🚚 Free returns</span>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo" aria-label="Site Footer">
+      <div class="footer-inner">
+        <div class="footer-col footer-about">
+          <a href="index.html" class="footer-logo">StyleHub</a>
+          <p class="footer-desc">
+            Modern fashion for men and women. Free shipping over $75 and easy returns.
+          </p>
+          <address class="footer-contact">
+            <a href="mailto:hello@stylehub.example">hello@stylehub.example</a><br />
+            <a href="tel:+1234567890">+1 (234) 567-890</a>
+          </address>
+        </div>
+
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul class="footer-list">
+            <li><a href="categories.html">Women's Clothing</a></li>
+            <li><a href="categories.html">Men's Clothing</a></li>
+            <li><a href="categories.html">Footwear</a></li>
+            <li><a href="categories.html">Accessories</a></li>
+            <li><a href="categories.html">Sale</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul class="footer-list">
+            <li><a href="support.html">Customer Service</a></li>
+            <li><a href="support.html#shipping">Shipping & Returns</a></li>
+            <li><a href="support.html#faq">FAQ</a></li>
+            <li><a href="support.html#privacy">Privacy Policy</a></li>
+            <li><a href="support.html#terms">Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-newsletter">
+          <h4>Join & Save</h4>
+          <p class="newsletter-text">Sign up and get 10% off your first order.</p>
+          <form
+            class="footer-newsletter-form"
+            action="#"
+            method="post"
+            aria-label="Subscribe to newsletter"
+          >
+            <label for="footer-email" class="sr-only">Email address</label>
+            <input
+              id="footer-email"
+              type="email"
+              name="email"
+              placeholder="you@example.com"
+              required
+            />
+            <button type="submit">Subscribe</button>
+          </form>
+
+          <div class="social-row" aria-label="Follow us">
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="4" />
+                <path d="M16 11.37a4 4 0 1 1-7.999.001A4 4 0 0 1 16 11.37z" />
+                <path d="M17.5 6.5h.01" />
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Facebook">
+              <svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+                <path d="M18 2h-3a4 4 0 0 0-4 4v3H8v3h3v7h3v-7h2.5L18 12h-2V6a1 1 0 0 1 1-1h2z" />
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter">
+              <svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+                <path
+                  d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 22.43 1s-2 .89-3.17 1.31A4.5 4.5 0 0 0 16.11 1c-2.66 0-4.77 2.39-4.77 5.34 0 .42.05.82.14 1.21C7.69 7.6 4.07 5.97 1.64 3.39c-.46.79-.72 1.71-.72 2.69 0 1.86.9 3.51 2.3 4.48a4.5 4.5 0 0 1-2.16-.6s.01.02-.01.03c0 2.59 1.82 4.75 4.24 5.24a4.5 4.5 0 0 1-2.13.08c.6 2.06 2.34 3.56 4.4 3.6A9 9 0 0 1 1 19.54 12.73 12.73 0 0 0 6.92 21c8.3 0 12.85-7.23 12.85-13.5l-.01-.62A9.22 9.22 0 0 0 23 3z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">© <span id="year">2024</span> StyleHub. All rights reserved.</p>
+        <div class="bottom-links">
+          <a href="about.html">About</a>
+          <a href="support.html">Contact</a>
+          <a href="support.html#privacy">Privacy</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

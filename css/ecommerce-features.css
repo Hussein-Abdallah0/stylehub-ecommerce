@@ -1,0 +1,17 @@
+/* Progressive Enhancement */
+.webp .hero-banner {
+  background-image: url("hero.webp");
+}
+
+.no-webp .hero-banner {
+  background-image: url("hero.jpg");
+}
+
+/* Critical CSS Loading */
+.above-fold {
+  /* Critical styles for immediate rendering */
+}
+
+.below-fold {
+  /* Non-critical styles loaded asynchronously */
+}
