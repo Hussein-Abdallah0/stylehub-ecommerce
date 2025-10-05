@@ -16,21 +16,22 @@ Every page is mobile-responsive and styled consistently with a modern minimalist
 
 ## 🌐 Live Pages (Structure)
 
-| Page | File | Description |
-|------|------|--------------|
-| 🏠 Home | `index.html` | Hero banner, product grid, social proof section, footer |
-| 🛒 Product Categories | `categories.html` | Breadcrumb navigation, filter sidebar, responsive product grid |
-| 👗 Product Details | `product.html` | Product gallery, thumbnails, description, reviews |
-| 🏢 About Us | `about.html` | Brand story, sustainability info, team section, timeline, map embed |
-| 📞 Customer Service | `support.html` | FAQ accordion, contact options, self-service tools |
-| 💬 Global Styles | `css/styles.css` | Global layout, typography, responsive design |
-| 🧱 Reset | `css/reset.css` | CSS reset for consistent base styling |
+| Page                  | File              | Description                                                         |
+| --------------------- | ----------------- | ------------------------------------------------------------------- |
+| 🏠 Home               | `index.html`      | Hero banner, product grid, social proof section, footer             |
+| 🛒 Product Categories | `categories.html` | Breadcrumb navigation, filter sidebar, responsive product grid      |
+| 👗 Product Details    | `product.html`    | Product gallery, thumbnails, description, reviews                   |
+| 🏢 About Us           | `about.html`      | Brand story, sustainability info, team section, timeline, map embed |
+| 📞 Customer Service   | `support.html`    | FAQ accordion, contact options, self-service tools                  |
+| 💬 Global Styles      | `css/styles.css`  | Global layout, typography, responsive design                        |
+| 🧱 Reset              | `css/reset.css`   | CSS reset for consistent base styling                               |
 
 ---
 
 ## 🎨 Key Features
 
 ### 🖼️ Home Page (`index.html`)
+
 - Full-width **hero banner** with promotional message and overlay
 - **Responsive image scaling** — hero image adjusts perfectly on all screens
 - **Social Proof section** with:
@@ -41,6 +42,7 @@ Every page is mobile-responsive and styled consistently with a modern minimalist
 ---
 
 ### 🛍️ Categories Page (`categories.html`)
+
 - **Breadcrumb navigation** with clickable links and highlighted current page  
   `Home > Women’s Clothing > Dresses`
 - **Filter Sidebar (Desktop)** and responsive layout
@@ -57,6 +59,7 @@ Every page is mobile-responsive and styled consistently with a modern minimalist
 ---
 
 ### 👗 Product Page (`product.html`)
+
 - **Product Image Gallery**
   - Main large image
   - Clickable thumbnails (when clicked, updates main image)
@@ -70,6 +73,7 @@ Every page is mobile-responsive and styled consistently with a modern minimalist
 ---
 
 ### 🏢 About Us Page (`about.html`)
+
 - **Brand Story & Mission** — includes vision, values, and company milestones
 - **Timeline Visualization**
   - Vertical alternating layout for company events
@@ -84,12 +88,14 @@ Every page is mobile-responsive and styled consistently with a modern minimalist
 - **Responsive & Accessible** layout throughout
 
 > 💡 Map Embedding Options:
+>
 > - Google Maps (with `YOUR_API_KEY`)
 > - OpenStreetMap (no key required)
 
 ---
 
 ### 💬 Customer Service Page (`support.html`)
+
 - **Accordion FAQ System** (pure CSS structure)
   - Shipping & Delivery
   - Returns & Exchanges
@@ -112,9 +118,10 @@ Every page is mobile-responsive and styled consistently with a modern minimalist
 ## 📱 Responsive Design
 
 All pages are designed for:
-- **Desktop (≥1024px)** — multi-column layouts, sidebars visible  
-- **Tablet (768–1023px)** — grids compress gracefully  
-- **Mobile (≤767px)** — stacked layouts, menus hidden, filters collapse  
+
+- **Desktop (≥1024px)** — multi-column layouts, sidebars visible
+- **Tablet (768–1023px)** — grids compress gracefully
+- **Mobile (≤767px)** — stacked layouts, menus hidden, filters collapse
 
 Media queries ensure the design adapts to every screen size.
 
@@ -122,13 +129,13 @@ Media queries ensure the design adapts to every screen size.
 
 ## 🧩 Tech Stack
 
-| Technology | Purpose |
-|-------------|----------|
-| **HTML5** | Semantic page structure |
-| **CSS3 (Flexbox + Grid)** | Layout and responsiveness |
-| **Reset.css** | Normalize styles across browsers |
-| **No JavaScript** | Lightweight, static-only implementation |
-| **Images** | Local `/images/` directory for assets |
+| Technology                | Purpose                                 |
+| ------------------------- | --------------------------------------- |
+| **HTML5**                 | Semantic page structure                 |
+| **CSS3 (Flexbox + Grid)** | Layout and responsiveness               |
+| **Reset.css**             | Normalize styles across browsers        |
+| **No JavaScript**         | Lightweight, static-only implementation |
+| **Images**                | Local `/images/` directory for assets   |
 
 ---
 
@@ -142,16 +149,27 @@ stylehub/
 ├── product.html
 ├── about.html
 ├── support.html
+├── account.html
+├── cart.html
+├── checkout.html
+├── support.html
 │
 ├── css/
+│   ├── pages/
+│   ├── reset.css
+│   ├── base.css
+│   ├── components.css
+│   ├── ecommerce-features.css
+│   ├── layout.css
+│   ├── variables.css
 │   ├── reset.css
 │   └── styles.css
 │
 └── images/
-    ├── hero/
+    ├── about/
     ├── social/
     ├── products/
-    └── team/
+    └── product/
 ```
 
 ---
@@ -176,6 +194,7 @@ All design and code authored by [Your Name].
 ---
 
 ## 🏁 Future Enhancements (Optional)
+
 - Add JavaScript for:
   - Accordion interactivity
   - Product filtering
