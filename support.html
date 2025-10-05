@@ -213,6 +213,58 @@
           </div>
         </section>
 
+        <aside class="support-actions">
+          <section class="contact-panel">
+            <h3>Contact us</h3>
+            <p class="muted">We aim to respond within 24 hours (longer on weekends).</p>
+
+            <form class="contact-form" action="#" method="post" enctype="multipart/form-data">
+              <label class="form-label" for="cf-name">Name</label>
+              <input id="cf-name" name="name" class="form-input" type="text" required />
+
+              <label class="form-label" for="cf-email">Email</label>
+              <input id="cf-email" name="email" class="form-input" type="email" required />
+
+              <label class="form-label" for="cf-category">Category</label>
+              <select id="cf-category" name="category" class="form-input">
+                <option>Shipping</option>
+                <option>Returns</option>
+                <option>Product</option>
+                <option>Account</option>
+              </select>
+
+              <label class="form-label" for="cf-priority">Priority</label>
+              <select id="cf-priority" name="priority" class="form-input">
+                <option>Normal</option>
+                <option>High</option>
+                <option>Urgent</option>
+              </select>
+
+              <label class="form-label" for="cf-message">Message</label>
+              <textarea
+                id="cf-message"
+                name="message"
+                class="form-input"
+                rows="4"
+                placeholder="Describe your issue..."
+              ></textarea>
+
+              <label class="form-label" for="cf-file">Attach a photo or document (optional)</label>
+              <input
+                id="cf-file"
+                name="attachment"
+                class="form-input"
+                type="file"
+                accept="image/*,.pdf"
+              />
+
+              <div class="form-actions">
+                <button class="btn-primary" type="submit">Send message</button>
+                <a href="tel:+15551234567" class="btn-secondary">Call support</a>
+              </div>
+            </form>
+          </section>
+
         
     </main>
 
