@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>StyleHub - Categories</title>
+    <meta name="description" content="StyleHub categories" />
+    <link rel="icon" type="image/png" href="images/logo.png" />
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/ecommerce-features.css" />
+    <link rel="stylesheet" href="css/pages/categories.css" />
+
+    <style>
+      /* visually hide helper while keeping element accessible */
+      .sr-only {
+        position: absolute !important;
+        width: 1px !important;
+        height: 1px !important;
+        padding: 0 !important;
+        margin: -1px !important;
+        overflow: hidden !important;
+        clip: rect(0 0 0 0) !important;
+        white-space: nowrap !important;
+        border: 0 !important;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="index.html" class="logo">StyleHub</a>
+
+        <nav class="main-nav" aria-label="Primary navigation">
+          <ul class="home-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="support.html">Support</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-right">
+          <form action="#" method="get" class="search-form" role="search">
+            <label for="search" class="sr-only">Search</label>
+            <input
+              id="search"
+              name="q"
+              type="search"
+              placeholder="Search products"
+              class="home-search"
+            />
+          </form>
+
+          <a class="nav-link" href="cart.html">Cart</a>
+          <a class="nav-link" href="account.html">Account</a>
+        </div>
+      </div>
+    </header>
+
+    <input id="filters-toggle" class="filters-toggle" type="checkbox" aria-hidden="true" />
+    <label for="filters-toggle" class="filters-backdrop" aria-hidden="true"></label>
+
+    <main class="page-grid">
+      <!-- IMPORTANT: category radios must be direct children of <main> and appear BEFORE .product-area
+           so your CSS sibling selectors (e.g. #cat-all:checked ~ .product-area ...) work. -->
+      <input class="sr-only" type="radio" id="cat-all" name="category" checked />
+      <input class="sr-only" type="radio" id="cat-dresses" name="category" />
+      <input class="sr-only" type="radio" id="cat-tops" name="category" />
+      <input class="sr-only" type="radio" id="cat-pants" name="category" />
+      <input class="sr-only" type="radio" id="cat-outer" name="category" />
+      <input class="sr-only" type="radio" id="cat-footwear" name="category" />
+      <input class="sr-only" type="radio" id="cat-access" name="category" />
+
+      <div class="breadcrumb" style="grid-column: 1 / -1">
+        <nav aria-label="Breadcrumb">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="categories.html">Women's Clothing</a></li>
+            <li aria-current="page">Dresses</li>
+          </ol>
+        </nav>
+      </div>
+
+      <aside class="filters" aria-label="Filters">
+        <label for="filters-toggle" class="filters-close-btn" aria-hidden="true">Close</label>
+        <form class="filters-form" method="get" action="categories.html">
+          <!-- Category radios: labels reference the inputs by id (inputs live above in <main>) -->
+          <div class="filter-block categories-block">
+            <h4>Categories</h4>
+
+            <label class="filter-radio" for="cat-all">All</label>
+            <label class="filter-radio" for="cat-dresses">Dresses</label>
+            <label class="filter-radio" for="cat-tops">Tops</label>
+            <label class="filter-radio" for="cat-pants">Pants</label>
+            <label class="filter-radio" for="cat-outer">Outerwear</label>
+            <label class="filter-radio" for="cat-footwear">Footwear</label>
+            <label class="filter-radio" for="cat-access">Accessories</label>
+          </div>
+
+          <!-- Price section -->
+          <div class="filter-block price-block">
+            <h4>Price</h4>
+
+            <div class="price-quick" aria-hidden="true">
+              <a class="price-btn" href="?min_price=25&max_price=50">$25-50</a>
+              <a class="price-btn" href="?min_price=50&max_price=100">$50-100</a>
+              <a class="price-btn" href="?min_price=100&max_price=200">$100-200</a>
+              <a class="price-btn" href="?min_price=200">$200+</a>
+            </div>
+
+            <div class="price-visual" aria-hidden="true">
+              <div class="price-slider" role="img" aria-label="Price slider visual">
+                <div class="price-range-fill"></div>
+                <div class="price-thumb price-thumb-left" aria-hidden="true"></div>
+                <div class="price-thumb price-thumb-right" aria-hidden="true"></div>
+              </div>
+            </div>
+
+            <div class="price-inputs">
+              <label class="price-label"
+                >Min
+                <input name="min_price" type="number" min="0" max="500" step="1" placeholder="0" />
+              </label>
+              <label class="price-label"
+                >Max
+                <input
+                  name="max_price"
+                  type="number"
+                  min="0"
+                  max="500"
+                  step="1"
+                  placeholder="500"
+                />
+              </label>
+            </div>
+          </div>
+
+          <!-- Size -->
+          <div class="filter-block">
+            <h4>Size</h4>
+            <div class="size-grid">
+              <label><input type="checkbox" name="size[]" value="XS" /> XS</label>
+              <label><input type="checkbox" name="size[]" value="S" /> S</label>
+              <label><input type="checkbox" name="size[]" value="M" /> M</label>
+              <label><input type="checkbox" name="size[]" value="L" /> L</label>
+              <label><input type="checkbox" name="size[]" value="XL" /> XL</label>
+              <label><input type="checkbox" name="size[]" value="XXL" /> XXL</label>
+              <label><input type="checkbox" name="size[]" value="3XL" /> 3XL</label>
+            </div>
+
+            <details class="shoe-sizes">
+              <summary>Shoe sizes</summary>
+              <div class="size-grid shoe-grid">
+                <label><input type="checkbox" name="shoe_size[]" value="5" /> 5</label>
+                <label><input type="checkbox" name="shoe_size[]" value="5.5" /> 5.5</label>
+                <label><input type="checkbox" name="shoe_size[]" value="6" /> 6</label>
+                <label><input type="checkbox" name="shoe_size[]" value="6.5" /> 6.5</label>
+                <label><input type="checkbox" name="shoe_size[]" value="7" /> 7</label>
+                <label><input type="checkbox" name="shoe_size[]" value="7.5" /> 7.5</label>
+                <label><input type="checkbox" name="shoe_size[]" value="8" /> 8</label>
+                <label><input type="checkbox" name="shoe_size[]" value="8.5" /> 8.5</label>
+                <label><input type="checkbox" name="shoe_size[]" value="9" /> 9</label>
+                <label><input type="checkbox" name="shoe_size[]" value="9.5" /> 9.5</label>
+                <label><input type="checkbox" name="shoe_size[]" value="10" /> 10</label>
+                <label><input type="checkbox" name="shoe_size[]" value="10.5" /> 10.5</label>
+                <label><input type="checkbox" name="shoe_size[]" value="11" /> 11</label>
+                <label><input type="checkbox" name="shoe_size[]" value="12" /> 12</label>
+              </div>
+            </details>
+          </div>
+
+          <!-- Color -->
+          <div class="filter-block">
+            <h4>Color</h4>
+            <div class="color-grid" role="list">
+              <label class="swatch" title="Black"
+                ><input type="checkbox" name="color[]" value="black" /><span
+                  class="swatch-dot sw-black"
+                ></span
+              ></label>
+              <label class="swatch" title="White"
+                ><input type="checkbox" name="color[]" value="white" /><span
+                  class="swatch-dot sw-white"
+                ></span
+              ></label>
+              <label class="swatch" title="Red"
+                ><input type="checkbox" name="color[]" value="red" /><span
+                  class="swatch-dot sw-red"
+                ></span
+              ></label>
+              <label class="swatch" title="Blue"
+                ><input type="checkbox" name="color[]" value="blue" /><span
+                  class="swatch-dot sw-blue"
+                ></span
+              ></label>
+              <label class="swatch" title="Green"
+                ><input type="checkbox" name="color[]" value="green" /><span
+                  class="swatch-dot sw-green"
+                ></span
+              ></label>
+            </div>
+          </div>
+
+          <!-- Brand -->
+          <div class="filter-block">
+            <h4>Brand</h4>
+            <input
+              class="brand-search"
+              type="search"
+              name="brand_search"
+              placeholder="Search brands"
+            />
+            <div class="brand-list">
+              <label><input type="checkbox" name="brand[]" value="Atlas" /> Atlas</label>
+              <label><input type="checkbox" name="brand[]" value="Nordmill" /> Nordmill</label>
+              <label><input type="checkbox" name="brand[]" value="Forge" /> Forge</label>
+              <label><input type="checkbox" name="brand[]" value="Wayfare" /> Wayfare</label>
+            </div>
+          </div>
+
+          <!-- Toggles -->
+          <div class="filter-block">
+            <h4>More</h4>
+            <label class="toggle"><input type="checkbox" name="on_sale" value="1" /> On Sale</label>
+            <label class="toggle"
+              ><input type="checkbox" name="new_arrivals" value="1" /> New Arrivals</label
+            >
+            <label class="toggle"
+              ><input type="checkbox" name="in_stock" value="1" /> In Stock only</label
+            >
+            <label class="toggle"
+              ><input type="checkbox" name="free_shipping" value="1" /> Free Shipping</label
+            >
+          </div>
+
+          <div class="filter-actions">
+            <button class="btn-primary" type="submit">Apply</button>
+            <a class="btn-link" href="categories.html">Clear</a>
+          </div>
+        </form>
+      </aside>
+
+      <section class="product-area">
+        <header class="product-tools">
+          <label for="filters-toggle" class="filters-open-btn" aria-hidden="false">Filters</label>
+
+          <div class="results-info">Showing 1-24 of 156 results for "Women's Dresses"</div>
+
+          <div class="controls">
+            <label class="small"
+              >Sort
+              <select name="sort" aria-label="Sort products">
+                <option>Featured</option>
+                <option>Price: Low to High</option>
+                <option>Price: High to Low</option>
+                <option>Newest</option>
+                <option>Customer Rating</option>
+                <option>Bestselling</option>
+              </select>
+            </label>
+
+            <div class="view-toggle" role="radiogroup" aria-label="View">
+              <input type="radio" id="view-grid" name="view" checked />
+              <label for="view-grid" aria-hidden="true">Grid</label>
+              <input type="radio" id="view-list" name="view" />
+              <label for="view-list" aria-hidden="true">List</label>
+            </div>
+          </div>
+        </header>
+
+        <div class="products-wrapper">
+          <div class="product-grid">
+            <!-- 24 products (same examples as earlier) -->
+            <article class="product-card dresses">
+              <div class="product-image-container">
+                <img
+                  src="images/products/dress.jpg"
+                  alt="Floral Midi Dress"
+                  class="product-image"
+                />
+                <span class="product-badge new">New</span>
+              </div>
+              <div class="product-info">
+                <h3>Floral Midi Dress</h3>
+                <p class="brand">Meadow</p>
+                <p class="price">$99.00</p>
+              </div>
+            </article>
+
+            <article class="product-card dresses">
+              <div class="product-image-container">
+                <img src="images/product/floral1.jpg" alt="Silk Slip Dress" class="product-image" />
+              </div>
+              <div class="product-info">
+                <h3>Silk Slip Dress</h3>
+                <p class="brand">Atelier</p>
+                <p class="price">$149.00</p>
+              </div>
+            </article>
+
+            <article class="product-card tops">
+              <div class="product-image-container">
+                <img src="images/products/shirt.jpg" alt="Everyday Shirt" class="product-image" />
+              </div>
+              <div class="product-info">
+                <h3>Everyday Shirt</h3>
+                <p class="brand">Atlas</p>
+                <p class="price">$49.00</p>
+              </div>
+            </article>
+
+            <article class="product-card tops">
+              <div class="product-image-container">
+                <img src="images/products/waffle.jpg" alt="Waffle Tee" class="product-image" />
+              </div>
+              <div class="product-info">
+                <h3>Waffle Tee</h3>
+                <p class="brand">Loom</p>
+                <p class="price">$25.00</p>
+              </div>
+            </article>
+
+            <article class="product-card pants">
+              <div class="product-image-container">
+                <img src="images/products/chino.jpg" alt="Slim Chino" class="product-image" />
+              </div>
+              <div class="product-info">
+                <h3>Slim Chino</h3>
+                <p class="brand">Atlas</p>
+                <p class="price">$59.00</p>
+              </div>
+            </article>
+
+            <article class="product-card pants">
+              <div class="product-image-container">
+                <img src="images/products/denim.jpg" alt="Classic Denim" class="product-image" />
+              </div>
+              <div class="product-info">
+                <h3>Classic Denim</h3>
+                <p class="brand">Harbor</p>
+                <p class="price">$89.00</p>
+              </div>
+            </article>
+
+            <article class="product-card outer">
+              <div class="product-image-container">
+                <img src="images/products/blazer.jpg" alt="Tailored Blazer" class="product-image" />
+              </div>
+              <div class="product-info">
+                <h3>Tailored Blazer</h3>
+                <p class="brand">Atelier</p>
+                <p class="price">$199.00</p>
+              </div>
+            </article>
+
+            <article class="product-card outer">
+              <div class="product-image-container">
+                <img
+                  src="images/products/parka.jpg"
+                  alt="Lightweight Parka"
+                  class="product-image"
+                />
+                <span class="product-badge new">New</span>
+              </div>
+              <div class="product-info">
+                <h3>Lightweight Parka</h3>
+                <p class="brand">Forge</p>
+                <p class="price">$149.00</p>
+              </div>
+            </article>
+
+            <article class="product-card footwear">
+              <div class="product-image-container">
+                <img src="images/products/sneaker.jpg" alt="Canvas Sneaker" class="product-image" />
+              </div>
+              <div class="product-info">
+                <h3>Canvas Sneaker</h3>
+                <p class="brand">Wayfare</p>
+                <p class="price">$69.00</p>
+              </div>
+            </article>
+
+            <article class="product-card footwear">
+              <div class="product-image-container">
+                <img src="images/products/loafer.jpg" alt="Leather Loafers" class="product-image" />
+                <span class="product-badge bestseller">Bestseller</span>
+              </div>
+              <div class="product-info">
+                <h3>Leather Loafers</h3>
+                <p class="brand">Wayfare</p>
+                <p class="price">$119.00</p>
+              </div>
+            </article>
+
+            <article class="product-card access">
+              <div class="product-image-container">
+                <img
+                  src="images/products/tote.jpg"
+                  alt="Minimal Leather Tote"
+                  class="product-image"
+                />
+              </div>
+              <div class="product-info">
+                <h3>Minimal Leather Tote</h3>
+                <p class="brand">Atelier</p>
+                <p class="price">$179.00</p>
+              </div>
+            </article>
+
+            <article class="product-card access">
+              <div class="product-image-container">
+                <img
+                  src="images/products/scarf.jpg"
+                  alt="Chunky Knit Scarf"
+                  class="product-image"
+                />
+              </div>
+              <div class="product-info">
+                <h3>Chunky Knit Scarf</h3>
+                <p class="brand">Loom</p>
+                <p class="price">$29.00</p>
+              </div>
+            </article>
+
+            <article class="product-card dresses">
+              <div class="product-image-container">
+                <img src="images/products/pleated.jpg" alt="Pleated Skirt" class="product-image" />
+              </div>
+              <div class="product-info">
+                <h3>Pleated Skirt</h3>
+                <p class="brand">Meadow</p>
+                <p class="price">$69.00</p>
+              </div>
+            </article>
+
+            <article class="product-card tops">
+              <div class="product-image-container">
+                <img src="images/products/merino.jpg" alt="Merino Crew" class="product-image" />
+              </div>
+              <div class="product-info">
+                <h3>Merino Crew</h3>
+                <p class="brand">Nordmill</p>
+                <p class="price">$89.00</p>
+              </div>
+            </article>
+
+            <article class="product-card pants">
+              <div class="product-image-container">
+                <img src="images/products/pants.jpg" alt="Wide Leg Pant" class="product-image" />
+              </div>
+              <div class="product-info">
+                <h3>Wide Leg Pant</h3>
+                <p class="brand">Harbor</p>
+                <p class="price">$99.00</p>
+              </div>
+            </article>
+
+            <article class="product-card outer">
+              <div class="product-image-container">
+                <img src="images/products/trench.jpg" alt="Classic Trench" class="product-image" />
+                <span class="product-badge new">New</span>
+              </div>
+              <div class="product-info">
+                <h3>Classic Trench</h3>
+                <p class="brand">Harbor</p>
+                <p class="price">$229.00</p>
+              </div>
+            </article>
+
+            <article class="product-card footwear">
+              <div class="product-image-container">
+                <img src="images/products/boot.jpg" alt="Chelsea Boot" class="product-image" />
+              </div>
+              <div class="product-info">
+                <h3>Chelsea Boot</h3>
+                <p class="brand">Forge</p>
+                <p class="price">$159.00</p>
+              </div>
+            </article>
+
+            <article class="product-card access">
+              <div class="product-image-container">
+                <img src="images/products/watch.jpg" alt="Minimal Watch" class="product-image" />
+              </div>
+              <div class="product-info">
+                <h3>Minimal Watch</h3>
+                <p class="brand">Atelier</p>
+                <p class="price">$199.00</p>
+              </div>
+            </article>
+
+            <article class="product-card dresses">
+              <div class="product-image-container">
+                <img
+                  src="images/products/dress.jpg"
+                  alt="Tiered Maxi Dress"
+                  class="product-image"
+                />
+              </div>
+              <div class="product-info">
+                <h3>Tiered Maxi Dress</h3>
+                <p class="brand">Meadow</p>
+                <p class="price">$129.00</p>
+              </div>
+            </article>
+
+            <article class="product-card tops">
+              <div class="product-image-container">
+                <img
+                  src="images/products/shirt.jpg"
+                  alt="Striped Button Shirt"
+                  class="product-image"
+                />
+              </div>
+              <div class="product-info">
+                <h3>Striped Button Shirt</h3>
+                <p class="brand">Atlas</p>
+                <p class="price">$59.00</p>
+              </div>
+            </article>
+
+            <article class="product-card pants">
+              <div class="product-image-container">
+                <img
+                  src="images/products/sweatpants.jpg"
+                  alt="Jogger Sweatpant"
+                  class="product-image"
+                />
+              </div>
+              <div class="product-info">
+                <h3>Jogger Sweatpant</h3>
+                <p class="brand">Loom</p>
+                <p class="price">$49.00</p>
+              </div>
+            </article>
+
+            <article class="product-card outer">
+              <div class="product-image-container">
+                <img src="images/products/denim.jpg" alt="Denim Jacket" class="product-image" />
+              </div>
+              <div class="product-info">
+                <h3>Denim Jacket</h3>
+                <p class="brand">Harbor</p>
+                <p class="price">$119.00</p>
+              </div>
+            </article>
+
+            <article class="product-card footwear">
+              <div class="product-image-container">
+                <img src="images/products/boot.jpg" alt="Running Trainer" class="product-image" />
+              </div>
+              <div class="product-info">
+                <h3>Running Trainer</h3>
+                <p class="brand">Wayfare</p>
+                <p class="price">$89.00</p>
+              </div>
+            </article>
+
+            <article class="product-card access">
+              <div class="product-image-container">
+                <img src="images/products/beanie.jpg" alt="Ribbed Beanie" class="product-image" />
+              </div>
+              <div class="product-info">
+                <h3>Ribbed Beanie</h3>
+                <p class="brand">Harbor</p>
+                <p class="price">$19.00</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <nav class="pagination" aria-label="Pagination">
+          <a class="page" href="#prev">< Prev</a>
+          <a class="page" href="#1">1</a>
+          <a class="page" href="#2">2</a>
+          <a class="page" href="#3">3</a>
+          <a class="page" href="#next">Next ></a>
+        </nav>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo" aria-label="Site Footer">
+      <div class="footer-inner">
+        <div class="footer-col footer-about">
+          <a href="index.html" class="footer-logo">StyleHub</a>
+          <p class="footer-desc">
+            Modern fashion for men and women. Free shipping over $75 and easy returns.
+          </p>
+          <address class="footer-contact">
+            <a href="mailto:hello@stylehub.example">hello@stylehub.example</a><br />
+            <a href="tel:+1234567890">+1 (234) 567-890</a>
+          </address>
+        </div>
+
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul class="footer-list">
+            <li><a href="categories.html">Women's Clothing</a></li>
+            <li><a href="categories.html">Men's Clothing</a></li>
+            <li><a href="categories.html">Footwear</a></li>
+            <li><a href="categories.html">Accessories</a></li>
+            <li><a href="categories.html">Sale</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul class="footer-list">
+            <li><a href="support.html">Customer Service</a></li>
+            <li><a href="support.html#shipping">Shipping & Returns</a></li>
+            <li><a href="support.html#faq">FAQ</a></li>
+            <li><a href="support.html#privacy">Privacy Policy</a></li>
+            <li><a href="support.html#terms">Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-newsletter">
+          <h4>Join & Save</h4>
+          <p class="newsletter-text">Sign up and get 10% off your first order.</p>
+          <form
+            class="footer-newsletter-form"
+            action="#"
+            method="post"
+            aria-label="Subscribe to newsletter"
+          >
+            <label for="footer-email" class="sr-only">Email address</label>
+            <input
+              id="footer-email"
+              type="email"
+              name="email"
+              placeholder="you@example.com"
+              required
+            />
+            <button type="submit">Subscribe</button>
+          </form>
+
+          <div class="social-row" aria-label="Follow us">
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="4" />
+                <path d="M16 11.37a4 4 0 1 1-7.999.001A4 4 0 0 1 16 11.37z" />
+                <path d="M17.5 6.5h.01" />
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Facebook">
+              <svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+                <path d="M18 2h-3a4 4 0 0 0-4 4v3H8v3h3v7h3v-7h2.5L18 12h-2V6a1 1 0 0 1 1-1h2z" />
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter">
+              <svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+              >
+                <path
+                  d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 22.43 1s-2 .89-3.17 1.31A4.5 4.5 0 0 0 16.11 1c-2.66 0-4.77 2.39-4.77 5.34 0 .42.05.82.14 1.21C7.69 7.6 4.07 5.97 1.64 3.39c-.46.79-.72 1.71-.72 2.69 0 1.86.9 3.51 2.3 4.48a4.5 4.5 0 0 1-2.16-.6s.01.02-.01.03c0 2.59 1.82 4.75 4.24 5.24a4.5 4.5 0 0 1-2.13.08c.6 2.06 2.34 3.56 4.4 3.6A9 9 0 0 1 1 19.54 12.73 12.73 0 0 0 6.92 21c8.3 0 12.85-7.23 12.85-13.5l-.01-.62A9.22 9.22 0 0 0 23 3z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">© <span id="year">2024</span> StyleHub. All rights reserved.</p>
+        <div class="bottom-links">
+          <a href="about.html">About</a>
+          <a href="support.html">Contact</a>
+          <a href="support.html#privacy">Privacy</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
