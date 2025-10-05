@@ -1,0 +1,677 @@
+/* page layout */
+.page-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 28px;
+  max-width: 1300px;
+  margin: 20px auto;
+  padding: 0 18px 40px;
+  box-sizing: border-box;
+}
+
+.breadcrumb nav ol {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 12px 0;
+  margin: 0 0 8px 0;
+}
+
+.breadcrumb ol li {
+  color: #555;
+}
+.breadcrumb ol li a {
+  color: #111;
+  text-decoration: none;
+}
+.breadcrumb ol li + li::before {
+  content: "›";
+  margin: 0 0.5rem;
+  color: #999;
+}
+
+/* filters */
+.filters {
+  border-right: 1px solid #eee;
+  padding-right: 18px;
+  box-sizing: border-box;
+}
+
+.filters-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.filter-block h4 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  color: #111;
+}
+
+.filter-radio {
+  display: block;
+  padding: 8px 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #333;
+  background: transparent;
+}
+
+/* hide native radios visually */
+.filters-form input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* highlight selected category radio */
+.filters-form input[type="radio"]:checked + label.filter-radio {
+  background: rgba(124, 58, 237, 0.08);
+  border-left: 3px solid #7c3aed;
+  padding-left: 8px;
+  color: #7c3aed;
+}
+
+/* price & quick */
+.price-quick {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+.price-btn {
+  background: #f3f4f6;
+  padding: 6px 8px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #111;
+  font-size: 0.95rem;
+}
+
+/* Price visual (purely decorative) */
+.price-visual {
+  margin: 12px 0 8px;
+}
+.price-slider {
+  position: relative;
+  height: 8px;
+  background: #e6e9ef;
+  border-radius: 6px;
+  overflow: visible;
+}
+.price-range-fill {
+  position: absolute;
+  left: 20%;
+  right: 25%;
+  height: 100%;
+  background: #7c3aed;
+  border-radius: 6px;
+}
+.price-thumb {
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border: 3px solid #7c3aed;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  box-shadow: 0 4px 10px rgba(124, 58, 237, 0.08);
+}
+.price-thumb-left {
+  left: 20%;
+}
+.price-thumb-right {
+  right: 25%;
+}
+
+/* price inputs */
+.price-inputs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+.price-label {
+  font-size: 0.95rem;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+}
+.price-label input {
+  width: 110px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+/* sizes/colors */
+.size-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.shoe-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.swatch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.swatch input {
+  display: none;
+}
+.swatch-dot {
+  width: 34px;
+  height: 34px;
+  border-radius: 6px;
+  display: inline-block;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+}
+.sw-black {
+  background: #111;
+}
+.sw-white {
+  background: #fff;
+  border: 1px solid #ddd;
+}
+.sw-red {
+  background: #ef4444;
+}
+.sw-blue {
+  background: #2563eb;
+}
+.sw-green {
+  background: #10b981;
+}
+
+/* brand list */
+.brand-search {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+}
+.brand-list label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+/* filter actions */
+.filter-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 6px;
+}
+.btn-primary {
+  background: #7c3aed;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-link {
+  background: none;
+  border: none;
+  color: #7c3aed;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* product area */
+.product-area {
+  padding-left: 6px;
+  box-sizing: border-box;
+}
+.product-tools {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+.controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.small select {
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+/* view toggle */
+.view-toggle {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.view-toggle input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.view-toggle label {
+  padding: 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid #eee;
+  background: #fff;
+  font-weight: 600;
+  color: #333;
+}
+
+/* selected view style */
+#view-grid:checked + label[for="view-grid"] {
+  background: #7c3aed;
+  color: #fff;
+  border-color: #7c3aed;
+}
+#view-list:checked + label[for="view-list"] {
+  background: #7c3aed;
+  color: #fff;
+  border-color: #7c3aed;
+}
+
+/* products - base hidden, then show depending on selected category */
+.product-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
+/* hide all by default - CSS filter radio will reveal correct ones */
+.product-grid .product-card {
+  display: none;
+}
+
+/* show all when "all" selected */
+#cat-all:checked ~ .product-area .products-wrapper .product-grid .product-card {
+  display: block;
+}
+
+/* show dresses only */
+#cat-dresses:checked ~ .product-area .products-wrapper .product-grid .product-card {
+  display: none;
+}
+#cat-dresses:checked ~ .product-area .products-wrapper .product-grid .product-card.dresses {
+  display: block;
+}
+
+/* show tops only */
+#cat-tops:checked ~ .product-area .products-wrapper .product-grid .product-card {
+  display: none;
+}
+#cat-tops:checked ~ .product-area .products-wrapper .product-grid .product-card.tops {
+  display: block;
+}
+
+/* show pants only */
+#cat-pants:checked ~ .product-area .products-wrapper .product-grid .product-card {
+  display: none;
+}
+#cat-pants:checked ~ .product-area .products-wrapper .product-grid .product-card.pants {
+  display: block;
+}
+
+/* show outerwear only */
+#cat-outer:checked ~ .product-area .products-wrapper .product-grid .product-card {
+  display: none;
+}
+#cat-outer:checked ~ .product-area .products-wrapper .product-grid .product-card.outer {
+  display: block;
+}
+
+/* show footwear only */
+#cat-footwear:checked ~ .product-area .products-wrapper .product-grid .product-card {
+  display: none;
+}
+#cat-footwear:checked ~ .product-area .products-wrapper .product-grid .product-card.footwear {
+  display: block;
+}
+
+/* show accessories only */
+#cat-access:checked ~ .product-area .products-wrapper .product-grid .product-card {
+  display: none;
+}
+#cat-access:checked ~ .product-area .products-wrapper .product-grid .product-card.access {
+  display: block;
+}
+
+/* product-card visuals */
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(17, 17, 17, 0.06);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(17, 17, 17, 0.08);
+}
+
+.product-image-container {
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.product-info {
+  padding: 10px;
+}
+.product-info h3 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+}
+.product-info .brand {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+.product-info .price {
+  font-weight: 700;
+  color: #111;
+}
+
+/* badges */
+.product-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #ef4444;
+  color: white;
+  padding: 0.25rem 0.6rem;
+  border-radius: 16px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.product-badge.new {
+  background: #10b981;
+}
+.product-badge.bestseller {
+  background: #f59e0b;
+}
+
+/* view: list - make cards full-width stacked horizontally */
+#view-list:checked ~ .products-wrapper .product-grid {
+  display: block;
+}
+#view-list:checked ~ .products-wrapper .product-grid .product-card {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: stretch;
+}
+#view-list:checked ~ .products-wrapper .product-grid .product-card .product-image-container {
+  width: 180px;
+  flex: 0 0 180px;
+  height: 120px;
+  aspect-ratio: auto;
+}
+
+/* pagination */
+.pagination {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+.pagination .page {
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: #fff;
+  border: 1px solid #eee;
+  text-decoration: none;
+  color: #333;
+}
+
+/* details/summary accessible styling */
+details.cat,
+details.shoe-sizes {
+  border-radius: 8px;
+  background: transparent;
+  padding: 6px;
+  margin-bottom: 8px;
+}
+details summary {
+  list-style: none;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 8px;
+  display: block;
+  border-radius: 6px;
+  transition: background 0.15s ease, color 0.15s ease;
+  color: #222;
+}
+details[open] summary {
+  background: rgba(124, 58, 237, 0.08);
+  color: #7c3aed;
+  border-left: 3px solid #7c3aed;
+  padding-left: 10px;
+}
+details summary::-webkit-details-marker {
+  display: none;
+}
+.subfilters {
+  padding: 8px 8px 10px 10px;
+  display: grid;
+  gap: 6px;
+}
+.subfilters label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #333;
+}
+.subfilters input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #7c3aed;
+}
+
+/* responsive */
+@media (max-width: 980px) {
+  .page-grid {
+    grid-template-columns: 1fr;
+    padding: 12px;
+  }
+  .filters {
+    border-right: none;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+  }
+  .product-tools {
+    gap: 8px;
+  }
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .size-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .color-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* small phones */
+@media (max-width: 520px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+  .product-info h3 {
+    font-size: 0.98rem;
+  }
+  .view-toggle label {
+    padding: 6px;
+    font-size: 0.9rem;
+  }
+  .price-label input {
+    width: 100px;
+  }
+}
+
+/* hidden checkbox (keeps DOM neat) */
+.filters-toggle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* backdrop - hidden by default; visible when toggle checked */
+.filters-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1100;
+  cursor: default;
+}
+
+/* Filters open button (visible only on small screens) - place in .product-tools */
+.filters-open-btn {
+  display: none;
+  background: #fff;
+  color: #111;
+  border: 1px solid #ddd;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Close button inside the filters panel */
+.filters-close-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  color: #7c3aed;
+  font-weight: 700;
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+/* When toggle is checked: show backdrop and make filters a fixed modal on top */
+#filters-toggle:checked ~ .filters-backdrop {
+  display: block;
+}
+
+/* make the aside.filters appear above content as a panel when toggle is checked (mobile only) */
+@media (max-width: 980px) {
+  .filters-open-btn {
+    display: inline-block;
+  }
+
+  /* show close button inside the aside */
+  .filters-close-btn {
+    display: inline-block;
+  }
+
+  /* when checked, convert the sidebar into a modal panel */
+  #filters-toggle:checked ~ main .filters {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 92vw;
+    max-width: 420px;
+    z-index: 1200;
+    background: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: auto;
+    transform: translateX(0);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+  }
+
+  /* when panel is open, prevent the sidebar from taking normal flow space */
+  #filters-toggle:checked ~ main .page-grid {
+    pointer-events: none;
+  }
+  #filters-toggle:checked ~ main .page-grid .filters {
+    pointer-events: auto;
+  }
+
+  /* small tweak: hide the inline stacked filters scroll gap when modal open */
+  #filters-toggle:checked ~ main {
+    overflow: hidden;
+  }
+
+  /* hide the original sidebar border / bottom when stacked (keeps look consistent) */
+  .filters {
+    background: #fff;
+  }
+
+  /* show full-screen close button at top-right of the panel */
+  .filters-close-btn {
+    position: absolute;
+    right: 16px;
+    top: 14px;
+    background: none;
+    color: #7c3aed;
+    font-size: 0.95rem;
+  }
+
+  /* hide the .filters element's normal flow position so it doesn't create extra space */
+  .filters {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* ensure product grid remains below modal/backdrop visually */
+  .products-wrapper {
+    z-index: 0;
+  }
+}
+
+/* Keep modal functionality accessible on extremely small screens */
+@media (max-width: 520px) {
+  #filters-toggle:checked ~ main .filters {
+    width: 100vw;
+    max-width: 100%;
+    padding: 16px;
+  }
+  .filters-close-btn {
+    right: 12px;
+    top: 12px;
+  }
+}
