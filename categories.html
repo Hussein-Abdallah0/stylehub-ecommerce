@@ -14,6 +14,21 @@
     <link rel="stylesheet" href="css/components.css" />
     <link rel="stylesheet" href="css/ecommerce-features.css" />
     <link rel="stylesheet" href="css/pages/categories.css" />
+
+    <style>
+      /* visually hide helper while keeping element accessible */
+      .sr-only {
+        position: absolute !important;
+        width: 1px !important;
+        height: 1px !important;
+        padding: 0 !important;
+        margin: -1px !important;
+        overflow: hidden !important;
+        clip: rect(0 0 0 0) !important;
+        white-space: nowrap !important;
+        border: 0 !important;
+      }
+    </style>
   </head>
   <body>
     <header class="site-header">
@@ -46,11 +61,21 @@
         </div>
       </div>
     </header>
-    <input id="filters-toggle" class="filters-toggle" type="checkbox" aria-hidden="true" />
 
+    <input id="filters-toggle" class="filters-toggle" type="checkbox" aria-hidden="true" />
     <label for="filters-toggle" class="filters-backdrop" aria-hidden="true"></label>
 
     <main class="page-grid">
+      <!-- IMPORTANT: category radios must be direct children of <main> and appear BEFORE .product-area
+           so your CSS sibling selectors (e.g. #cat-all:checked ~ .product-area ...) work. -->
+      <input class="sr-only" type="radio" id="cat-all" name="category" checked />
+      <input class="sr-only" type="radio" id="cat-dresses" name="category" />
+      <input class="sr-only" type="radio" id="cat-tops" name="category" />
+      <input class="sr-only" type="radio" id="cat-pants" name="category" />
+      <input class="sr-only" type="radio" id="cat-outer" name="category" />
+      <input class="sr-only" type="radio" id="cat-footwear" name="category" />
+      <input class="sr-only" type="radio" id="cat-access" name="category" />
+
       <div class="breadcrumb" style="grid-column: 1 / -1">
         <nav aria-label="Breadcrumb">
           <ol>
@@ -64,29 +89,16 @@
       <aside class="filters" aria-label="Filters">
         <label for="filters-toggle" class="filters-close-btn" aria-hidden="true">Close</label>
         <form class="filters-form" method="get" action="categories.html">
-          <!-- Category radios -->
+          <!-- Category radios: labels reference the inputs by id (inputs live above in <main>) -->
           <div class="filter-block categories-block">
             <h4>Categories</h4>
 
-            <input type="radio" id="cat-all" name="category" checked />
             <label class="filter-radio" for="cat-all">All</label>
-
-            <input type="radio" id="cat-dresses" name="category" />
             <label class="filter-radio" for="cat-dresses">Dresses</label>
-
-            <input type="radio" id="cat-tops" name="category" />
             <label class="filter-radio" for="cat-tops">Tops</label>
-
-            <input type="radio" id="cat-pants" name="category" />
             <label class="filter-radio" for="cat-pants">Pants</label>
-
-            <input type="radio" id="cat-outer" name="category" />
             <label class="filter-radio" for="cat-outer">Outerwear</label>
-
-            <input type="radio" id="cat-footwear" name="category" />
             <label class="filter-radio" for="cat-footwear">Footwear</label>
-
-            <input type="radio" id="cat-access" name="category" />
             <label class="filter-radio" for="cat-access">Accessories</label>
           </div>
 
@@ -232,6 +244,344 @@
           </div>
         </form>
       </aside>
+
+      <section class="product-area">
+        <header class="product-tools">
+          <label for="filters-toggle" class="filters-open-btn" aria-hidden="false">Filters</label>
+
+          <div class="results-info">Showing 1-24 of 156 results for "Women's Dresses"</div>
+
+          <div class="controls">
+            <label class="small"
+              >Sort
+              <select name="sort" aria-label="Sort products">
+                <option>Featured</option>
+                <option>Price: Low to High</option>
+                <option>Price: High to Low</option>
+                <option>Newest</option>
+                <option>Customer Rating</option>
+                <option>Bestselling</option>
+              </select>
+            </label>
+
+            <div class="view-toggle" role="radiogroup" aria-label="View">
+              <input type="radio" id="view-grid" name="view" checked />
+              <label for="view-grid" aria-hidden="true">Grid</label>
+              <input type="radio" id="view-list" name="view" />
+              <label for="view-list" aria-hidden="true">List</label>
+            </div>
+          </div>
+        </header>
+
+        <div class="products-wrapper">
+          <div class="product-grid">
+            <!-- 24 products (same examples as earlier) -->
+            <article class="product-card dresses">
+              <div class="product-image-container">
+                <img
+                  src="images/products/dress.jpg"
+                  alt="Floral Midi Dress"
+                  class="product-image"
+                />
+                <span class="product-badge new">New</span>
+              </div>
+              <div class="product-info">
+                <h3>Floral Midi Dress</h3>
+                <p class="brand">Meadow</p>
+                <p class="price">$99.00</p>
+              </div>
+            </article>
+
+            <article class="product-card dresses">
+              <div class="product-image-container">
+                <img src="images/product/floral1.jpg" alt="Silk Slip Dress" class="product-image" />
+              </div>
+              <div class="product-info">
+                <h3>Silk Slip Dress</h3>
+                <p class="brand">Atelier</p>
+                <p class="price">$149.00</p>
+              </div>
+            </article>
+
+            <article class="product-card tops">
+              <div class="product-image-container">
+                <img src="images/products/shirt.jpg" alt="Everyday Shirt" class="product-image" />
+              </div>
+              <div class="product-info">
+                <h3>Everyday Shirt</h3>
+                <p class="brand">Atlas</p>
+                <p class="price">$49.00</p>
+              </div>
+            </article>
+
+            <article class="product-card tops">
+              <div class="product-image-container">
+                <img src="images/products/waffle.jpg" alt="Waffle Tee" class="product-image" />
+              </div>
+              <div class="product-info">
+                <h3>Waffle Tee</h3>
+                <p class="brand">Loom</p>
+                <p class="price">$25.00</p>
+              </div>
+            </article>
+
+            <article class="product-card pants">
+              <div class="product-image-container">
+                <img src="images/products/chino.jpg" alt="Slim Chino" class="product-image" />
+              </div>
+              <div class="product-info">
+                <h3>Slim Chino</h3>
+                <p class="brand">Atlas</p>
+                <p class="price">$59.00</p>
+              </div>
+            </article>
+
+            <article class="product-card pants">
+              <div class="product-image-container">
+                <img src="images/products/denim.jpg" alt="Classic Denim" class="product-image" />
+              </div>
+              <div class="product-info">
+                <h3>Classic Denim</h3>
+                <p class="brand">Harbor</p>
+                <p class="price">$89.00</p>
+              </div>
+            </article>
+
+            <article class="product-card outer">
+              <div class="product-image-container">
+                <img src="images/products/blazer.jpg" alt="Tailored Blazer" class="product-image" />
+              </div>
+              <div class="product-info">
+                <h3>Tailored Blazer</h3>
+                <p class="brand">Atelier</p>
+                <p class="price">$199.00</p>
+              </div>
+            </article>
+
+            <article class="product-card outer">
+              <div class="product-image-container">
+                <img
+                  src="images/products/parka.jpg"
+                  alt="Lightweight Parka"
+                  class="product-image"
+                />
+                <span class="product-badge new">New</span>
+              </div>
+              <div class="product-info">
+                <h3>Lightweight Parka</h3>
+                <p class="brand">Forge</p>
+                <p class="price">$149.00</p>
+              </div>
+            </article>
+
+            <article class="product-card footwear">
+              <div class="product-image-container">
+                <img src="images/products/sneaker.jpg" alt="Canvas Sneaker" class="product-image" />
+              </div>
+              <div class="product-info">
+                <h3>Canvas Sneaker</h3>
+                <p class="brand">Wayfare</p>
+                <p class="price">$69.00</p>
+              </div>
+            </article>
+
+            <article class="product-card footwear">
+              <div class="product-image-container">
+                <img src="images/products/loafer.jpg" alt="Leather Loafers" class="product-image" />
+                <span class="product-badge bestseller">Bestseller</span>
+              </div>
+              <div class="product-info">
+                <h3>Leather Loafers</h3>
+                <p class="brand">Wayfare</p>
+                <p class="price">$119.00</p>
+              </div>
+            </article>
+
+            <article class="product-card access">
+              <div class="product-image-container">
+                <img
+                  src="images/products/tote.jpg"
+                  alt="Minimal Leather Tote"
+                  class="product-image"
+                />
+              </div>
+              <div class="product-info">
+                <h3>Minimal Leather Tote</h3>
+                <p class="brand">Atelier</p>
+                <p class="price">$179.00</p>
+              </div>
+            </article>
+
+            <article class="product-card access">
+              <div class="product-image-container">
+                <img
+                  src="images/products/scarf.jpg"
+                  alt="Chunky Knit Scarf"
+                  class="product-image"
+                />
+              </div>
+              <div class="product-info">
+                <h3>Chunky Knit Scarf</h3>
+                <p class="brand">Loom</p>
+                <p class="price">$29.00</p>
+              </div>
+            </article>
+
+            <article class="product-card dresses">
+              <div class="product-image-container">
+                <img src="images/products/pleated.jpg" alt="Pleated Skirt" class="product-image" />
+              </div>
+              <div class="product-info">
+                <h3>Pleated Skirt</h3>
+                <p class="brand">Meadow</p>
+                <p class="price">$69.00</p>
+              </div>
+            </article>
+
+            <article class="product-card tops">
+              <div class="product-image-container">
+                <img src="images/products/merino.jpg" alt="Merino Crew" class="product-image" />
+              </div>
+              <div class="product-info">
+                <h3>Merino Crew</h3>
+                <p class="brand">Nordmill</p>
+                <p class="price">$89.00</p>
+              </div>
+            </article>
+
+            <article class="product-card pants">
+              <div class="product-image-container">
+                <img src="images/products/pants.jpg" alt="Wide Leg Pant" class="product-image" />
+              </div>
+              <div class="product-info">
+                <h3>Wide Leg Pant</h3>
+                <p class="brand">Harbor</p>
+                <p class="price">$99.00</p>
+              </div>
+            </article>
+
+            <article class="product-card outer">
+              <div class="product-image-container">
+                <img src="images/products/trench.jpg" alt="Classic Trench" class="product-image" />
+                <span class="product-badge new">New</span>
+              </div>
+              <div class="product-info">
+                <h3>Classic Trench</h3>
+                <p class="brand">Harbor</p>
+                <p class="price">$229.00</p>
+              </div>
+            </article>
+
+            <article class="product-card footwear">
+              <div class="product-image-container">
+                <img src="images/products/boot.jpg" alt="Chelsea Boot" class="product-image" />
+              </div>
+              <div class="product-info">
+                <h3>Chelsea Boot</h3>
+                <p class="brand">Forge</p>
+                <p class="price">$159.00</p>
+              </div>
+            </article>
+
+            <article class="product-card access">
+              <div class="product-image-container">
+                <img src="images/products/watch.jpg" alt="Minimal Watch" class="product-image" />
+              </div>
+              <div class="product-info">
+                <h3>Minimal Watch</h3>
+                <p class="brand">Atelier</p>
+                <p class="price">$199.00</p>
+              </div>
+            </article>
+
+            <article class="product-card dresses">
+              <div class="product-image-container">
+                <img
+                  src="images/products/dress.jpg"
+                  alt="Tiered Maxi Dress"
+                  class="product-image"
+                />
+              </div>
+              <div class="product-info">
+                <h3>Tiered Maxi Dress</h3>
+                <p class="brand">Meadow</p>
+                <p class="price">$129.00</p>
+              </div>
+            </article>
+
+            <article class="product-card tops">
+              <div class="product-image-container">
+                <img
+                  src="images/products/shirt.jpg"
+                  alt="Striped Button Shirt"
+                  class="product-image"
+                />
+              </div>
+              <div class="product-info">
+                <h3>Striped Button Shirt</h3>
+                <p class="brand">Atlas</p>
+                <p class="price">$59.00</p>
+              </div>
+            </article>
+
+            <article class="product-card pants">
+              <div class="product-image-container">
+                <img
+                  src="images/products/sweatpants.jpg"
+                  alt="Jogger Sweatpant"
+                  class="product-image"
+                />
+              </div>
+              <div class="product-info">
+                <h3>Jogger Sweatpant</h3>
+                <p class="brand">Loom</p>
+                <p class="price">$49.00</p>
+              </div>
+            </article>
+
+            <article class="product-card outer">
+              <div class="product-image-container">
+                <img src="images/products/denim.jpg" alt="Denim Jacket" class="product-image" />
+              </div>
+              <div class="product-info">
+                <h3>Denim Jacket</h3>
+                <p class="brand">Harbor</p>
+                <p class="price">$119.00</p>
+              </div>
+            </article>
+
+            <article class="product-card footwear">
+              <div class="product-image-container">
+                <img src="images/products/boot.jpg" alt="Running Trainer" class="product-image" />
+              </div>
+              <div class="product-info">
+                <h3>Running Trainer</h3>
+                <p class="brand">Wayfare</p>
+                <p class="price">$89.00</p>
+              </div>
+            </article>
+
+            <article class="product-card access">
+              <div class="product-image-container">
+                <img src="images/products/beanie.jpg" alt="Ribbed Beanie" class="product-image" />
+              </div>
+              <div class="product-info">
+                <h3>Ribbed Beanie</h3>
+                <p class="brand">Harbor</p>
+                <p class="price">$19.00</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <nav class="pagination" aria-label="Pagination">
+          <a class="page" href="#prev">< Prev</a>
+          <a class="page" href="#1">1</a>
+          <a class="page" href="#2">2</a>
+          <a class="page" href="#3">3</a>
+          <a class="page" href="#next">Next ></a>
+        </nav>
+      </section>
     </main>
 
     <!-- Footer -->
