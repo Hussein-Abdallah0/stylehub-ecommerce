@@ -265,6 +265,71 @@
             </form>
           </section>
 
+          <section class="order-lookup">
+            <h3>Order lookup</h3>
+            <form action="#" method="get" class="lookup-form">
+              <label class="form-label" for="ol-number">Order number</label>
+              <input
+                id="ol-number"
+                name="order"
+                class="form-input"
+                type="text"
+                placeholder="e.g. SH-20254"
+              />
+
+              <label class="form-label" for="ol-email">Order email</label>
+              <input
+                id="ol-email"
+                name="email"
+                class="form-input"
+                type="email"
+                placeholder="you@example.com"
+              />
+
+              <button class="btn-primary" type="submit">Lookup order</button>
+            </form>
+          </section>
+
+          <section class="returns-panel">
+            <h3>Return / Exchange</h3>
+            <form class="return-form" action="#" method="post" enctype="multipart/form-data">
+              <label class="form-label" for="ret-order">Order number</label>
+              <input id="ret-order" name="order" class="form-input" type="text" required />
+
+              <label class="form-label" for="ret-item">Item SKU or name</label>
+              <input id="ret-item" name="item" class="form-input" type="text" required />
+
+              <label class="form-label">Request type</label>
+              <select class="form-input" name="req_type">
+                <option>Return (refund)</option>
+                <option>Exchange (size)</option>
+                <option>Exchange (color)</option>
+                <option>Repair</option>
+              </select>
+
+              <label class="form-label" for="ret-reason">Reason</label>
+              <textarea
+                id="ret-reason"
+                name="reason"
+                class="form-input"
+                rows="3"
+                placeholder="Tell us why..."
+              ></textarea>
+
+              <label class="form-label" for="ret-file">Attach photos (optional)</label>
+              <input
+                id="ret-file"
+                name="photos[]"
+                class="form-input"
+                type="file"
+                accept="image/*"
+                multiple
+              />
+
+              <button class="btn-primary" type="submit">Submit request</button>
+            </form>
+          </section>
+
         
     </main>
 
