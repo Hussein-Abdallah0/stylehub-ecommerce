@@ -261,6 +261,105 @@
               </form>
             </div>
 
+            <!-- STEP 2: Payment -->
+            <div class="step-panel panel-2">
+              <h2>Payment Method</h2>
+
+              <div class="payment-options-top">
+                <label class="pay-pill"
+                  ><input type="radio" name="pay" checked /> Credit / Debit</label
+                >
+                <label class="pay-pill"><input type="radio" name="pay" /> PayPal</label>
+                <label class="pay-pill"><input type="radio" name="pay" /> Apple Pay</label>
+                <label class="pay-pill"><input type="radio" name="pay" /> Buy now, pay later</label>
+              </div>
+
+              <form class="payment-form" method="post" action="#" novalidate>
+                <div class="form-row">
+                  <div class="form-group full">
+                    <label class="form-label" for="card-number">Card number</label>
+                    <input
+                      class="form-input card-input"
+                      id="card-number"
+                      name="card_number"
+                      type="text"
+                      inputmode="numeric"
+                      placeholder="•••• •••• •••• ••••"
+                      maxlength="19"
+                      required
+                    />
+                    <div class="validation-message">Enter a valid card number</div>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="card-name">Cardholder name</label>
+                    <input
+                      class="form-input"
+                      id="card-name"
+                      name="card_name"
+                      type="text"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="exp">Expiry (MM/YY)</label>
+                    <div class="expiry-row">
+                      <select id="exp-mm" class="form-input small" required>
+                        <option value="">MM</option>
+                        <option>01</option>
+                        <option>02</option>
+                        <option>03</option>
+                      </select>
+                      <select id="exp-yy" class="form-input small" required>
+                        <option value="">YY</option>
+                        <option>24</option>
+                        <option>25</option>
+                        <option>26</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="cvv"
+                      >CVV
+                      <span class="cvv-note" title="3 or 4 digit code on your card">?</span></label
+                    >
+                    <input
+                      class="form-input"
+                      id="cvv"
+                      name="cvv"
+                      type="text"
+                      inputmode="numeric"
+                      maxlength="4"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <label class="form-inline"
+                    ><input type="checkbox" name="billing_same" checked /> Billing address same as
+                    shipping</label
+                  >
+                </div>
+
+                <div class="security-notes">
+                  <div class="badge">🔒 SSL</div>
+                  <div class="badge">Norton Secured</div>
+                  <div class="badge">PCI Compliant</div>
+                  <div class="encryption">All payment information is encrypted</div>
+                </div>
+
+                <div class="form-actions">
+                  <label for="step3" class="btn-primary goto">Review order →</label>
+                  <label for="step1" class="btn-secondary back">← Back to shipping</label>
+                </div>
+              </form>
+            </div>
+
             
     </main>
 
