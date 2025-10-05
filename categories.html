@@ -90,7 +90,45 @@
             <label class="filter-radio" for="cat-access">Accessories</label>
           </div>
 
-         
+          <!-- Price section -->
+          <div class="filter-block price-block">
+            <h4>Price</h4>
+
+            <div class="price-quick" aria-hidden="true">
+              <a class="price-btn" href="?min_price=25&max_price=50">$25-50</a>
+              <a class="price-btn" href="?min_price=50&max_price=100">$50-100</a>
+              <a class="price-btn" href="?min_price=100&max_price=200">$100-200</a>
+              <a class="price-btn" href="?min_price=200">$200+</a>
+            </div>
+
+            <div class="price-visual" aria-hidden="true">
+              <div class="price-slider" role="img" aria-label="Price slider visual">
+                <div class="price-range-fill"></div>
+                <div class="price-thumb price-thumb-left" aria-hidden="true"></div>
+                <div class="price-thumb price-thumb-right" aria-hidden="true"></div>
+              </div>
+            </div>
+
+            <div class="price-inputs">
+              <label class="price-label"
+                >Min
+                <input name="min_price" type="number" min="0" max="500" step="1" placeholder="0" />
+              </label>
+              <label class="price-label"
+                >Max
+                <input
+                  name="max_price"
+                  type="number"
+                  min="0"
+                  max="500"
+                  step="1"
+                  placeholder="500"
+                />
+              </label>
+            </div>
+          </div>
+
+          
     </main>
 
     <!-- Footer -->
