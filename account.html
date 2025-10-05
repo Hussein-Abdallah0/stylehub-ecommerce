@@ -48,7 +48,47 @@
       </div>
     </header>
 
-    <main class="account-dashboard"></main>
+    <main class="account-dashboard">
+      <aside class="account-sidebar" aria-label="Account navigation">
+        <div class="sidebar-profile">
+          <img src="images/profile.jpg" alt="User avatar" class="avatar" />
+          <div class="sidebar-name">Hi, <strong>Jane</strong></div>
+          <div class="sidebar-email">jane.doe@example.com</div>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="Account sections">
+          <div class="nav-section">
+            <div class="section-title">Profile</div>
+            <a class="nav-link active" href="#profile">Personal information</a>
+            <a class="nav-link" href="#security">Password & security</a>
+            <a class="nav-link" href="#comms">Communication preferences</a>
+            <a class="nav-link" href="#settings">Account settings</a>
+          </div>
+
+          <div class="nav-section">
+            <div class="section-title">Orders</div>
+            <a class="nav-link" href="#orders">Order history</a>
+            <a class="nav-link" href="#track">Track orders</a>
+            <a class="nav-link" href="#returns">Returns & requests</a>
+            <a class="nav-link" href="#reorder">Reorder items</a>
+          </div>
+
+          <div class="nav-section">
+            <div class="section-title">Shopping</div>
+            <a class="nav-link" href="#wishlist">Wishlist</a>
+            <a class="nav-link" href="#recent">Recently viewed</a>
+            <a class="nav-link" href="#saved">Saved for later</a>
+            <a class="nav-link" href="#sizeprefs">Size preferences</a>
+          </div>
+
+          <div class="nav-section">
+            <div class="section-title">Addresses</div>
+            <a class="nav-link" href="#addresses">Address book</a>
+            <a class="nav-link" href="#payments">Payment methods</a>
+          </div>
+        </nav>
+      </aside>
+    </main>
 
     <!-- Footer -->
     <footer class="site-footer" role="contentinfo" aria-label="Site Footer">
