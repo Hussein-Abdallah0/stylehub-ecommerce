@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>StyleHub</title>
     <meta name="description" content="StyleHub - Modern fashion for men and women." />
-    <link rel="icon" type="image/png" href="images/logo.png" />
+    <link rel="icon" type="image/png" href="images/logo.png">
 
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/variables.css" />
@@ -19,34 +19,80 @@
   <body>
     <!-- Header -->
     <header class="site-header">
-      <div class="header-inner">
-        <a href="index.html" class="logo">StyleHub</a>
+  <div class="header-inner">
+    <a href="index.html" class="logo">StyleHub</a>
 
-        <nav class="main-nav" aria-label="Primary navigation">
-          <ul class="home-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="categories.html">Categories</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="support.html">Support</a></li>
-          </ul>
-        </nav>
+    <nav class="main-nav" aria-label="Primary navigation">
+      <ul class="home-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="categories.html">Categories</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+    </nav>
 
-        <div class="nav-right">
-          <form action="#" method="get" class="search-form" role="search">
-            <label for="search" class="sr-only">Search</label>
-            <input
-              id="search"
-              name="q"
-              type="search"
-              placeholder="Search products"
-              class="home-search"
-            />
-          </form>
+    <div class="nav-right">
+      <form action="#" method="get" class="search-form" role="search">
+        <label for="search" class="sr-only">Search</label>
+        <input id="search" name="q" type="search" placeholder="Search products" class="home-search" />
+      </form>
 
-          <a class="nav-link" href="cart.html">Cart</a>
-          <a class="nav-link" href="account.html">Account</a>
-        </div>
-      </div>
-    </header>
+      <a class="nav-link" href="cart.html">Cart</a>
+      <a class="nav-link" href="account.html">Account</a>
+    </div>
+  </div>
+</header>
+
+
+    <!-- Hero Banner (4 slides) -->
+    <main>
+      <section class="hero-banner">
+        <!-- Slide 1 -->
+        <figure class="banner-slide">
+          <img class="responsive-image" src="images/sale.jpg" alt="New Fall Collection" />
+          <div class="banner-overlay"></div>
+          <figcaption class="banner-content">
+            <h1>New Fall Collection 2024 - Up to 50% Off</h1>
+            <p>Discover the season's must-haves.</p>
+            <a href="categories.html" class="btn btn-primary">Shop Now</a>
+          </figcaption>
+        </figure>
+
+        <!-- Slide 2 -->
+        <figure class="banner-slide">
+          <img class="responsive-image" src="images/delivery.jpg" alt="Free Shipping Over $75" />
+          <div class="banner-overlay"></div>
+          <figcaption class="banner-content">
+            <h1>Free Shipping on Orders Over $75</h1>
+            <p>Fast and reliable delivery across the country.</p>
+            <a href="support.html" class="btn btn-secondary">Learn More</a>
+          </figcaption>
+        </figure>
+
+        <!-- Slide 3 -->
+        <figure class="banner-slide">
+          <img class="responsive-image" src="images/trending.jpg" alt="Sustainable Fashion" />
+          <div class="banner-overlay"></div>
+          <figcaption class="banner-content">
+            <h1>Trending Now: Sustainable Fashion</h1>
+            <p>Eco-friendly fabrics and mindful production.</p>
+            <a href="categories.html" class="btn btn-primary">Explore</a>
+          </figcaption>
+        </figure>
+
+        <!-- Slide 4 -->
+        <figure class="banner-slide">
+          <img class="responsive-image" src="images/sales.jpg" alt="Member Exclusive" />
+          <div class="banner-overlay"></div>
+          <figcaption class="banner-content">
+            <h1>Member Exclusive: Early Access to Sales</h1>
+            <p>Join the club for priority access and perks.</p>
+            <a href="account.html" class="btn btn-secondary">Join Now</a>
+          </figcaption>
+        </figure>
+      </section>
+
+      
+
   </body>
 </html>
